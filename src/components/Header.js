@@ -9,9 +9,9 @@ export default function Header() {
           <span>Juan Carlos Martinez</span>
         </div>
         <nav className="main-nav">
-          <a href="#work">Work</a>
-          <a href="#articles">Articles</a>
-          <a href="#contact" className="cta">Contacto</a>
+          <a href="#work">Proyectos</a>
+          <a href="#articles">Tecnologias</a>
+          <a href="#contact" className="cta">Hablemos</a>
         </nav>
       </div>
     </header>

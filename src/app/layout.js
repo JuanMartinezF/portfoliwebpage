@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "JCMF - Portfolio",
+  title: "JCMF",
   description: "Portafolio de Juan Carlos Martínez Fernández - Desarrollador de Software",
 };
 

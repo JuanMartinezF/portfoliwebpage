@@ -1,7 +1,10 @@
+'use client';
+
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
+import Experience from '@/components/Experience';
 import ProjectCard from '@/components/ProjectCard';
 import ProjectModal from '@/components/ProjectModal';
 
@@ -35,6 +38,7 @@ export default function Home() {
         <Header />
         <main>
           <Hero />
+          <Experience />
           <section id="articles" className="articles-section">
             <div className="container">
               <h2 className="section-title">Revisa mis trabajos</h2>

@@ -4,13 +4,14 @@
 :root {
   --bg: #050710;
   --deep: #071028;
-  --accent: #50d1ff;
+  --accent: #0b2886;
   --muted: #cbd5e1;
   --glass-border: rgba(255, 255, 255, 0.06);
   --glass-bg: rgba(255, 255, 255, 0.02);
   --container: 1100px;
   --background: #ffffff;
   --foreground: #171717;
+  --accental:#24832c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -96,7 +97,7 @@ body {
 .main-nav .cta {
   padding: 8px 14px;
   background: var(--accent);
-  color: #021029;
+  color: #e6f3ff;
   border-radius: 999px;
   font-weight: 600;
 }
@@ -113,6 +114,9 @@ body {
 
 .hero-inner {
   max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .eyebrow {
@@ -122,6 +126,22 @@ body {
   background: rgba(255, 255, 255, 0.04);
   color: var(--muted);
   margin-bottom: 18px;
+}
+
+.hero-photo {
+  margin: 20px auto;
+  display: inline-block;
+}
+
+.hero-photo img {
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 20px rgba(80, 209, 255, 0.3);
+  object-fit: cover;
+  object-position: top center;
+  width: 200px !important;
+  height: 200px !important;
+
 }
 
 .hero h1 {
@@ -153,6 +173,79 @@ body {
   border: 1px solid var(--glass-border);
   background: transparent;
   color: var(--muted);
+}
+
+/* Experience */
+.experience-section {
+  padding: 80px 0;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accental) 0%, rgba(80, 209, 255, 0.2) 100%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -46px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(80, 209, 255, 0.2);
+}
+
+.timeline-content {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.timeline-date {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.timeline-role {
+  color: #eaf6ff;
+  font-size: 20px;
+  margin: 0 0 4px;
+  font-family: "Poppins", sans-serif;
+}
+
+.timeline-company {
+  color: rgba(203, 213, 225, 0.7);
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.timeline-description {
+  color: rgba(203, 213, 225, 0.85);
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* Articles */
@@ -226,6 +319,17 @@ body {
   padding: 28px 0;
   text-align: center;
   color: rgba(203, 213, 225, 0.8);
+}
+
+.footer-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
 }
 
 /* Responsive */
@@ -337,4 +441,3 @@ body {
     opacity: 1;
   }
 }
-
