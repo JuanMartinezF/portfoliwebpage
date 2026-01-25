@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Hero() {
+export default function Hero({ onOpenCV }) {
   return (
     <section className="hero">
       <div className="container hero-inner">
@@ -15,9 +15,9 @@ export default function Hero() {
           Apasionado por la ciencia de datos y la inteligencia artificial, con experiencia en machine learning, deep learning, adquisición de datos y desarrollo web. He participado en proyectos que integran análisis de datos, modelos predictivos y aplicaciones web, entregando soluciones completas de software y datos orientadas a impacto real.
         </p>
         <div className="hero-cta">
-          <a className="btn primary" href="#articles">
+          <button className="btn primary" onClick={onOpenCV}>
             Descargar CV
-          </a>
+          </button>
         </div>
       </div>
     </section>
