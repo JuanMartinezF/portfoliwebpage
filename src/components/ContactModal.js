@@ -8,8 +8,8 @@ export default function ContactModal({ isOpen, onClose }) {
   const contacts = [
     {
       name: "Email",
-      value: "juancarlos@example.com",
-      link: "mailto:juancarlos@example.com",
+      value: "jcmartinezf14@gmail.com",
+      link: "mailto:jcmartinezf14@gmail.com",
       icon: "📧"
     },
     {

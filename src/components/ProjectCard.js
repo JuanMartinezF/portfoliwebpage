@@ -1,6 +1,9 @@
+import Image from 'next/image';
+
 export default function ProjectCard({
   title,
   description,
+  image,
   variant = "default",
   onSelect,
 }) {
@@ -17,7 +20,17 @@ export default function ProjectCard({
       }
       }}
     >
-      <div className={`thumb ${variant === "alt" ? "alt" : ""}`}></div>
+      <div className={`thumb ${variant === "alt" ? "alt" : ""}`}>
+        {image && (
+          <Image
+            src={image}
+            alt={title}
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        )}
+      </div>
       <div className="card-body">
         <h3>{title}</h3>
         <p>{description}</p>

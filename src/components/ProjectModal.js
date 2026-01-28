@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function ProjectModal({ project, onClose }) {
   if (!project) {
     return null;
@@ -10,7 +12,17 @@ export default function ProjectModal({ project, onClose }) {
           ×
         </button>
         <div className="project-modal__header">
-          <div className={`thumb ${project.variant === "alt" ? "alt" : ""}`}></div>
+          <div className={`thumb ${project.variant === "alt" ? "alt" : ""}`}>
+            {project.image && (
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
+            )}
+          </div>
           <div>
             <p className="project-modal__eyebrow">Proyecto destacado</p>
             <h3>{project.title}</h3>
@@ -31,6 +43,18 @@ export default function ProjectModal({ project, onClose }) {
             ))}
           </div>
         ) : null}
+        {project.pdfUrl && (
+          <div className="project-modal__actions">
+            <a 
+              href={project.pdfUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-pdf"
+            >
+              📄 Ver documentación del proyecto
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

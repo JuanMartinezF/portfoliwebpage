@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "title": "Herramienta ML para evaluación de salud cardíaca con ECG",
+    "description": "Modelo de machine learning para analizar señales ECG y estimar la salud cardíaca de deportistas.",
+    "longDescription": "Desarrollé una herramienta de software que integra procesamiento de señales ECG y modelos de machine learning para evaluar indicadores de salud cardíaca en deportistas. Construí la base de datos a partir de Kaggle y Physionet, procesé señales y migré los datos para entrenar una red neuronal en MATLAB. Participé en la integración del modelo con una interfaz gráfica usando AppDesigner, resolviendo errores de backend y frontend.",
+    "image": "/proyectos/sht.png",
+    "pdfUrl": "/proyectos/ManlUsuSHT.pdf",
+    "highlights": [
+      "Precisión de 94% validada con datasets clínicos",
+      "Arquitectura serverless con colas de eventos"
+    ],
+    "technologies": ["Python", "Numpy", "Pandas", "Matplotlib", "MATLAB", "Seaborn", "AppDesigner", "HTML"],
+    "variant": "default"
+  },
+  {
+    "id": 2,
+    "title": "Detección de enfermedades en hojas de mango (Visión Artificial)",
+    "description": "Sistema de visión artificial en MATLAB para detectar áreas infectadas en hojas de mango.",
+    "longDescription": "Desarrollé una aplicación desktop de procesamiento de imágenes para segmentar hojas de mango e identificar zonas de infección. Implementé filtros, kernels básicos y segmentación considerando distintos espacios de color (RGB, HSV, YCbCr) para mejorar la detección de contornos y regiones afectadas.",
+    "image": "/proyectos/Logo app.png",
+    "pdfUrl": "/proyectos/Manual de usuario AppMangoHealth.pdf",
+    "highlights": [
+      "Ingesta de datos en streaming",
+      "Segmentación de imagenes en múltiples espacios de color"
+    ],
+    "technologies": ["MATLAB", "AppDesigner"],
+    "variant": "alt"
+  },
+  {
+    "id": 3,
+    "title": "Adquisición de datos de médicos",
+    "description": "Extracción y limpieza masiva de datos de médicos desde un sitio web.",
+    "longDescription": "Desarrollé scripts de scraping para extraer información como nombre, dirección y costo de consulta desde múltiples páginas. Implementé procesos de limpieza, validación y consolidación, entregando los datos finales en formato Excel para análisis posterior.",
+    "image": "/proyectos/dotorspage.png",
+    "pdfUrl": "https://github.com/JuanMartinezF/Scraping-Doctor-s-Page",
+    "highlights": [
+      "Scraping de múltiples páginas web",
+      "Limpieza y validación de datos",
+      "Estructuras HTML y XML"
+    ],
+    "technologies": ["Excel", "Python", "BeautifulSoup","Requests", "Pandas"],
+    "variant": "default"
+  },
+  {
+    "id": 4,
+    "title": "Adquisición de datos de notarios",
+    "description": "Sistema de scraping para extraer más de 10.000 registros de notarios y generar datasets estructurados.",
+    "longDescription": "Construí un pipeline de adquisición de datos usando Selenium, BeautifulSoup y Requests para extraer información de contacto a gran escala. Procesé y estructuré los datos con Pandas y NumPy, entregando el resultado final en archivos CSV listos para análisis y uso comercial.",
+    "image": "/proyectos/prub.png",
+    "pdfUrl": "https://github.com/JuanMartinezF/Data_Scraping_Notaries",
+    "highlights": [
+        "Creación de un pipeline de scraping automatizado",
+      "Extracción de más de 100.000 registros",
+      "Generación de datasets en CSV"
+    ],
+    "technologies": ["Python", "BeautifulSoup", "Pandas", "Requests", "Numpy", "HTML","XML"],
+    "variant": "alt"
+  },
+  {
+    "id": 5,
+    "title": "Desarrollo Web Python (Réflex)",
+    "description": "Frontend y UI/UX para sitio web de congreso usando Réflex.",
+    "longDescription": "Participé en el diseño UI/UX y desarrollé secciones frontend utilizando Réflex (framework Python) integrando HTML, CSS, JavaScript y Tailwind. Enfoque en diseño responsivo y experiencia de usuario.",
+    "image": "/proyectos/congresofisica.png",
+    "pdfUrl": "",
+    "highlights": [
+      "Diseño UI/UX",
+      "Desarrollo frontend con Réflex",
+      "Implementación de Tailwind CSS"
+    ],
+    "technologies": ["Python", "Réflex", "HTML", "CSS", "JavaScript", "Tailwind CSS"],
+    "variant": "default"
+  },
+  {
+    "id": 6,
+    "title": "Desarrollo Web Fullstack",
+    "description": "Diseño, desarrollo y despliegue de sitio web fullstack para cliente.",
+    "longDescription": "Levanté requerimientos, diseñé mockups en Framer y desarrollé el frontend completo usando React, JavaScript y TypeScript. Implementé estilos con Tailwind CSS, integré formulario de contacto funcional, optimicé SEO básico y realicé el despliegue mediante FileZilla y Hostinger. También generé recursos gráficos con IA y Canva.",
+    "image": "/proyectos/servitaxipage.png",
+    "pdfUrl": "www.servitaxipopayan.com.co",
+    "highlights": [
+      "Desarrollo frontend con React/TypeScript",
+      "Optimización básica SEO",
+      "Despliegue en hosting",
+      "Creación de imagenes con Canva e IA"
+    ],
+    "technologies": ["React", "TypeScript", "HTML", "CSS", "JavaScript", "Git", "GitHub"],
+    "variant": "alt"
+  }
+]
