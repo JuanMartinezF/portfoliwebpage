@@ -11,7 +11,7 @@
     { "name": "Keras", "level": "Intermedio", "icon": "/iconos/keraslogogrande.png" },
     { "name": "Numpy", "level": "Intermedio", "icon": "/iconos/numpylogogrande.png" },
     { "name": "Pandas", "level": "Intermedio", "icon": "/iconos/Pandaslogogrande.png" },
-    { "name": "Matplotlib", "level": "Intermedio", "icon": "/iconos/Matplotliblogo.webp" },
+    { "name": "Matplotlib", "level": "Intermedio", "icon": "/iconos/matplotliblogo.webp" },
     { "name": "Seaborn", "level": "Intermedio", "icon": "/iconos/seabornlogo.svg" },
     { "name": "Scikit-learn", "level": "Intermedio", "icon": "/iconos/Scikitlearnlogo.png" },
     { "name": "Beautifulsoup", "level": "Intermedio", "icon": "/iconos/bs4logo.png" },
