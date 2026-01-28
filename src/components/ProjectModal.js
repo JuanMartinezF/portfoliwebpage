@@ -28,7 +28,13 @@ export default function ProjectModal({ project, onClose }) {
             <h3>{project.title}</h3>
           </div>
         </div>
-        <p className="project-modal__lead">{project.longDescription ?? project.description}</p>
+        {Array.isArray(project.longDescription) ? (
+          project.longDescription.map((paragraph, index) => (
+            <p key={index} className="project-modal__lead">{paragraph}</p>
+          ))
+        ) : (
+          <p className="project-modal__lead">{project.longDescription ?? project.description}</p>
+        )}
         {project.highlights?.length ? (
           <ul className="project-modal__list">
             {project.highlights.map((item) => (
