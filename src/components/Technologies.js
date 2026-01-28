@@ -41,7 +41,7 @@ export default function Technologies() {
   };
 
   return (
-    <section className="technologies-section">
+    <section id="technologies" className="technologies-section">
       <div className="container">
         <h2 className="section-title">Tecnologías & Herramientas</h2>
         

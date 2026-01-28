@@ -9,10 +9,12 @@ import Technologies from '@/components/Technologies';
 import ProjectCard from '@/components/ProjectCard';
 import ProjectModal from '@/components/ProjectModal';
 import CVModal from '@/components/CVModal';
+import ContactModal from '@/components/ContactModal';
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(null);
   const [isCVModalOpen, setIsCVModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const projects = [
     {
@@ -37,12 +39,12 @@ export default function Home() {
 
   return (
     <>
-      <div className={activeProject || isCVModalOpen ? 'content-dimmed' : ''}>
-        <Header />
+      <div className={activeProject || isCVModalOpen || isContactModalOpen ? 'content-dimmed' : ''}>
+        <Header onOpenContact={() => setIsContactModalOpen(true)} />
         <main>
           <Hero onOpenCV={() => setIsCVModalOpen(true)} />
           <Experience />
-          <section id="articles" className="articles-section">
+          <section id="projects" className="articles-section">
             <div className="container">
               <h2 className="section-title">Revisa mis trabajos</h2>
               <div className="grid cards-grid">
@@ -64,6 +66,7 @@ export default function Home() {
       </div>
       <ProjectModal project={activeProject} onClose={() => setActiveProject(null)} />
       <CVModal isOpen={isCVModalOpen} onClose={() => setIsCVModalOpen(false)} />
+      <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
     </>
   );
 }
