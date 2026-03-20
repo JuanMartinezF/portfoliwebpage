@@ -45,15 +45,18 @@ my-website/
 │   │   ├── layout.js          # Layout raíz con metadata y fonts
 │   │   └── page.js            # Página principal con todos los componentes
 │   ├── components/
-│   │   ├── Header.js          # Navegación responsive con hamburger menu
-│   │   ├── Hero.js            # Sección hero con foto y CTA
-│   │   ├── Experience.js      # Timeline de experiencia profesional
-│   │   ├── ProjectCard.js     # Tarjetas de proyectos
-│   │   ├── ProjectModal.js    # Modal para detalles de proyectos
-│   │   ├── Technologies.js    # Grid de tecnologías con iconos
-│   │   ├── CVModal.js         # Modal para descarga de CV bilingüe
-│   │   ├── ContactModal.js    # Modal con información de contacto
-│   │   └── Footer.js          # Footer con enlaces sociales
+│   │   ├── layout/            # 🎨 Componentes de estructura
+│   │   │   ├── Header.js      # Navegación responsive con hamburger menu
+│   │   │   └── Footer.js      # Footer con enlaces sociales
+│   │   ├── sections/          # 📄 Componentes de secciones
+│   │   │   ├── Hero.js        # Sección hero con foto y CTA
+│   │   │   ├── Experience.js  # Timeline de experiencia profesional
+│   │   │   ├── ProjectCard.js # Tarjetas de proyectos
+│   │   │   └── Technologies.js # Grid de tecnologías con iconos
+│   │   └── modals/            # 🪟 Componentes modales
+│   │       ├── ProjectModal.js  # Modal para detalles de proyectos
+│   │       ├── CVModal.js       # Modal para descarga de CV bilingüe
+│   │       └── ContactModal.js  # Modal con información de contacto
 │   └── data/                  # 📊 Datos centralizados en JSON
 │       ├── projects.json      # Lista de proyectos destacados
 │       ├── experiences.json   # Historial de experiencia laboral
@@ -63,6 +66,9 @@ my-website/
 │   ├── fotojcmf.jpg          # Foto de perfil
 │   ├── iconos/               # Iconos de tecnologías
 │   └── proyectos/            # 🖼️ Imágenes y PDFs de proyectos
+├── __tests__/                 # 🧪 Tests unitarios
+│   └── example.test.js       # Ejemplo de test
+├── .env.example              # Variables de entorno de ejemplo
 └── package.json
 ```
 

@@ -1,0 +1,153 @@
+/* ══════════════════════════════════════════
+   HEADER — Neo Brutalism
+══════════════════════════════════════════ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0A0A0A;
+  border-bottom: 3px solid #0A0A0A;
+  height: 64px;
+}
+
+.headerInner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── LOGO ──────────────────────────────── */
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 4px;
+  color: #2D6BE4;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s;
+  line-height: 1;
+}
+
+.logo:hover {
+  color: #F5F0E8;
+}
+
+/* ── NAV DESKTOP ───────────────────────── */
+.nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 0;
+}
+
+.navLink {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #F5F0E8;
+  background: none;
+  border: none;
+  border-right: 2px solid #1A1A1A;
+  height: 100%;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  background: #1A1A1A;
+  color: #2D6BE4;
+}
+
+/* CTA — último botón */
+.navCta {
+  background: #2D6BE4;
+  color: #F5F0E8;
+  border-right: none;
+  border-left: 3px solid #0A0A0A;
+  padding: 0 24px;
+}
+
+.navCta:hover {
+  background: #1A50C0;
+  color: #F5F0E8;
+}
+
+/* ── HAMBURGER MOBILE ──────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: 2px solid #2D6BE4;
+  padding: 8px 10px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #2D6BE4;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.hamburgerActive .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburgerActive .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburgerActive .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── RESPONSIVE ────────────────────────── */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #0A0A0A;
+    border-bottom: 3px solid #0A0A0A;
+    flex-direction: column;
+    height: auto;
+    z-index: 99;
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .navLink {
+    width: 100%;
+    height: 52px;
+    border-right: none;
+    border-bottom: 2px solid #1A1A1A;
+    justify-content: flex-start;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  .navCta {
+    border-left: none;
+    border-bottom: none;
+  }
+}

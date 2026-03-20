@@ -1,0 +1,131 @@
+/* ══════════════════════════════════════════
+   ABOUT MOBILE — solo visible en mobile
+   Neo Brutalism
+══════════════════════════════════════════ */
+
+/* oculto en desktop */
+.section {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .section {
+    display: block;
+    background: #F5F0E8;
+    border-top: 3px solid #0A0A0A;
+    border-bottom: 3px solid #0A0A0A;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* ── FOTO + INFO ── */
+  .photoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    border-bottom: 3px solid #0A0A0A;
+    padding: 28px;
+  }
+
+  .photo {
+    border: 3px solid #0A0A0A !important;
+    border-radius: 0 !important;
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: cover;
+    object-position: top center;
+    filter: grayscale(10%);
+  }
+
+  .info {
+    padding: 20px 24px;
+    border-bottom: 3px solid #0A0A0A;
+    background: #F5F0E8;
+  }
+
+  .name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #0A0A0A;
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+
+  .tagList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 2px solid #0A0A0A;
+    color: #0A0A0A;
+    background: transparent;
+  }
+
+  .tag:first-child {
+    background: #2D6BE4;
+    color: #F5F0E8;
+    border-color: #2D6BE4;
+  }
+
+  /* ── STATS ── */
+  .stats {
+    display: flex;
+    align-items: stretch;
+    background: #0A0A0A;
+  }
+
+  .stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 12px;
+    gap: 4px;
+  }
+
+  .statDivider {
+    width: 2px;
+    background: #1A1A1A;
+    align-self: stretch;
+  }
+
+  .statValue {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #F5F0E8;
+    line-height: 1;
+  }
+
+  .available {
+    font-family: 'Space Mono', monospace !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #00C566 !important;
+    letter-spacing: 1px;
+  }
+
+  .statLabel {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+  }
+}

@@ -1,0 +1,215 @@
+/* ══════════════════════════════════════════
+   PROJECT CARD — Neo Brutalism
+══════════════════════════════════════════ */
+
+/* ── CARD BASE ───────────────────────── */
+.card {
+  border: 3px solid #333;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 #2D6BE4;
+  border-color: #2D6BE4;
+}
+
+.card:focus-visible {
+  outline: 3px solid #2D6BE4;
+  outline-offset: 2px;
+}
+
+/* ── FEATURED ────────────────────────── */
+.featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+
+.featured .thumb {
+  min-height: 280px;
+  flex: 1;
+  border-bottom: none;
+  border-right: 3px solid #333;
+}
+
+.featured:hover .thumb {
+  border-color: #2D6BE4;
+}
+
+.featured .body {
+  flex: 1;
+  padding: 36px 32px;
+}
+
+.featured .title {
+  font-size: 28px;
+}
+
+.featured .desc {
+  font-size: 14px;
+  -webkit-line-clamp: unset;
+}
+
+/* ── THUMBNAIL ───────────────────────── */
+.thumb {
+  position: relative;
+  min-height: 200px;
+  background: #0A0A0A;
+  border-bottom: 3px solid #333;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.thumb img {
+  transition: transform 0.4s ease;
+  filter: grayscale(20%);
+}
+
+.card:hover .thumb img {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+.thumbPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  letter-spacing: 4px;
+  color: #2D6BE4;
+  opacity: 0.4;
+}
+
+/* badge destacado */
+.featuredBadge {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  background: #2D6BE4;
+  color: #F5F0E8;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-right: 3px solid #0A0A0A;
+  border-bottom: 3px solid #0A0A0A;
+  z-index: 1;
+}
+
+/* ── BODY ────────────────────────────── */
+.body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #111;
+}
+
+.projectNum {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2D6BE4;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #F5F0E8;
+  margin: 0 0 10px;
+  line-height: 1.1;
+}
+
+.desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #888;
+  margin-bottom: 20px;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── TAGS ────────────────────────────── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 2px solid #333;
+  border-radius: 0;
+}
+
+.badge_blue    { background: #2D6BE4; color: #F5F0E8; border-color: #2D6BE4; }
+.badge_green   { background: #00C566; color: #0A0A0A; border-color: #00C566; }
+.badge_gray    { background: #333;    color: #A09890; border-color: #444; }
+.badge_outline { background: transparent; color: #666; border-color: #333; }
+
+/* ── CTA ─────────────────────────────── */
+.cta {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #2D6BE4;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.15s;
+  margin-top: auto;
+}
+
+.card:hover .cta {
+  gap: 10px;
+}
+
+/* ── RESPONSIVE ──────────────────────── */
+@media (max-width: 768px) {
+  .featured {
+    flex-direction: column;
+    grid-column: unset;
+  }
+
+  .featured .thumb {
+    border-right: none;
+    border-bottom: 3px solid #333;
+    min-height: 200px;
+  }
+
+  .featured .body {
+    padding: 24px;
+  }
+
+  .featured .title {
+    font-size: 22px;
+  }
+}

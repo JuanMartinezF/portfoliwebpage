@@ -1,0 +1,293 @@
+/* ══════════════════════════════════════════
+   TECHNOLOGIES — Neo Brutalism
+══════════════════════════════════════════ */
+.section {
+  background: #0A0A0A;
+  border-top: 3px solid #0A0A0A;
+  border-bottom: 3px solid #0A0A0A;
+  padding: 100px 0;
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── SECTION HEADER ──────────────────── */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.sectionNumber {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  color: #2D6BE4;
+  opacity: 0.2;
+}
+
+.sectionTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 6vw, 60px);
+  letter-spacing: 2px;
+  line-height: 1;
+  color: #F5F0E8;
+  margin: 0;
+}
+
+/* ── CATEGORÍAS ──────────────────────── */
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 0;
+  border: 3px solid #333;
+  margin-bottom: 24px;
+}
+
+.category {
+  border-right: 3px solid #333;
+}
+
+.category:last-child {
+  border-right: none;
+}
+
+.categoryWide {
+  border-right: 3px solid #333;
+}
+
+/* ── CATEGORY HEADER ─────────────────── */
+.catHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 3px solid #333;
+  background: #111;
+}
+
+.catTitle {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2D6BE4;
+}
+
+.catCount {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: #333;
+  line-height: 1;
+}
+
+/* ── TECH GRID ───────────────────────── */
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+/* ── TECH ITEM ───────────────────────── */
+.techItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 2px solid #1A1A1A;
+  border-right: 2px solid #1A1A1A;
+  transition: background 0.15s;
+  cursor: default;
+}
+
+.techItem:hover {
+  background: #1A1A1A;
+}
+
+.techItem:nth-child(even) {
+  border-right: none;
+}
+
+.techItemLearning {
+  border: none;
+  background: transparent;
+}
+
+.techItemLearning:hover {
+  background: #1A1A1A;
+}
+
+/* ── TECH ICON ───────────────────────── */
+.techIcon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #2A2A2A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #0F0F0F;
+  padding: 4px;
+  transition: border-color 0.15s;
+}
+
+.techItem:hover .techIcon {
+  border-color: #2D6BE4;
+}
+
+/* ── TECH INFO ───────────────────────── */
+.techInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.techName {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #F5F0E8;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.techLevel {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* barra de nivel */
+.techBar {
+  height: 2px;
+  background: #222;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2px;
+}
+
+.techBarFill {
+  height: 100%;
+  background: #2D6BE4;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ── LEARNING BADGE ──────────────────── */
+.learningBadge {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #0A0A0A;
+  background: #2D6BE4;
+  padding: 2px 7px;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+/* ── LEARNING SECTION ────────────────── */
+.learningSection {
+  border: 3px solid #333;
+}
+
+.learningHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 3px solid #333;
+  background: #111;
+}
+
+.learningDot {
+  font-size: 10px;
+  color: #2D6BE4;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.learningGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.learningGrid .techItem {
+  border-right: 2px solid #1A1A1A;
+  border-bottom: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 12px;
+  gap: 10px;
+}
+
+.learningGrid .techItem:last-child {
+  border-right: none;
+}
+
+.learningGrid .techIcon {
+  width: 48px;
+  height: 48px;
+}
+
+/* ── RESPONSIVE ──────────────────────── */
+@media (max-width: 900px) {
+  .categories {
+    grid-template-columns: 1fr;
+  }
+
+  .category,
+  .categoryWide {
+    border-right: none;
+    border-bottom: 3px solid #333;
+  }
+
+  .category:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .sectionNumber {
+    font-size: 56px;
+  }
+
+  .learningGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .learningGrid .techItem:nth-child(2) {
+    border-right: none;
+  }
+
+  .learningGrid .techItem {
+    border-bottom: 2px solid #1A1A1A;
+  }
+
+  .learningGrid .techItem:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+}

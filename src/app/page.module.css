@@ -1,0 +1,51 @@
+/* ══════════════════════════════════════════
+   PROJECTS SECTION — Neo Brutalism
+══════════════════════════════════════════ */
+.projectsSection {
+  background: #0A0A0A;
+  border-top: 3px solid #0A0A0A;
+  border-bottom: 3px solid #0A0A0A;
+  padding: 100px 0;
+}
+
+.projectsInner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.sectionNumber {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  color: #2D6BE4;
+  opacity: 0.2;
+}
+
+.sectionTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 6vw, 60px);
+  letter-spacing: 2px;
+  line-height: 1;
+  color: #F5F0E8;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .projectsSection { padding: 64px 0; }
+  .grid { grid-template-columns: 1fr; }
+  .sectionNumber { font-size: 56px; }
+}

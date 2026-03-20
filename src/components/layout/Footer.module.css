@@ -1,0 +1,91 @@
+/* ══════════════════════════════════════════
+   FOOTER — Neo Brutalism
+══════════════════════════════════════════ */
+.footer {
+  background: #0A0A0A;
+  border-top: 3px solid #0A0A0A;
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 4px;
+  color: #2D6BE4;
+}
+
+.copy {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #444;
+  letter-spacing: 1px;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.link:hover {
+  color: #2D6BE4;
+}
+
+/* banda inferior */
+.band {
+  border-top: 2px solid #1A1A1A;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2A2A2A;
+}
+
+.bandDot {
+  font-size: 7px;
+  color: #2D6BE4;
+  opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .copy {
+    font-size: 9px;
+  }
+
+  .band {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
