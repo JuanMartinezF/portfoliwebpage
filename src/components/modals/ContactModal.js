@@ -12,7 +12,7 @@ const contacts = [
   {
     name: 'WhatsApp',
     value: 'Escríbeme directo',
-    link: 'https://wa.me/TU_NUMERO',
+    link: 'https://wa.me/+573150290803',
     Icon: MessageCircle,
     highlight: true,
   },

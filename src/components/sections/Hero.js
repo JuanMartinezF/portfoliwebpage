@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { MessageCircle } from 'lucide-react';
 import styles from './Hero.module.css';
 
 export default function Hero({ onOpenCV }) {
@@ -50,7 +51,8 @@ export default function Hero({ onOpenCV }) {
               rel="noopener noreferrer"
               className={`${styles.btn} ${styles.btnPrimary}`}
             >
-              💬 WhatsApp
+              <MessageCircle size={16} />
+              <span>WhatsApp</span>
             </a>
             <button
               className={`${styles.btn} ${styles.btnGhost}`}

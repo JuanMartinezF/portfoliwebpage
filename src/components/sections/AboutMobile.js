@@ -36,7 +36,7 @@ export default function AboutMobile() {
           </div>
           <div className={styles.statDivider} />
           <div className={styles.stat}>
-            <span className={styles.statValue}>3+</span>
+            <span className={styles.statValue}>5+</span>
             <span className={styles.statLabel}>Años exp.</span>
           </div>
           <div className={styles.statDivider} />
