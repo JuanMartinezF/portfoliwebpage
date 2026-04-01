@@ -1,8 +1,22 @@
+'use client';
+
 import Image from 'next/image';
 import { MessageCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './Hero.module.css';
+import {
+  fadeLeft,
+  fadeRight,
+  fadeUp,
+  staggerContainer,
+  viewportConfig,
+} from '@/hooks/useScrollReveal';
 
 export default function Hero({ onOpenCV }) {
+  const { strings } = useLanguage();
+  const h = strings.hero;
+
   return (
     <section className={styles.hero}>
 
@@ -19,7 +33,7 @@ export default function Hero({ onOpenCV }) {
               <span className={styles.dot}>◆</span>
               <span>DATA ENGINEERING</span>
               <span className={styles.dot}>◆</span>
-              <span>CANVA & DISEÑO</span>
+              <span>CANVA &amp; DISEÑO</span>
               <span className={styles.dot}>◆</span>
             </span>
           ))}
@@ -30,21 +44,37 @@ export default function Hero({ onOpenCV }) {
       <div className={styles.heroInner}>
 
         {/* LEFT — texto principal */}
-        <div className={styles.heroLeft}>
-          <span className={styles.locationTag}>📍 Popayán, Colombia</span>
+        <motion.div
+          className={styles.heroLeft}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
+          <motion.span className={styles.locationTag} variants={fadeLeft}>
+            {h.location}
+          </motion.span>
 
-          <h1 className={styles.heroTitle}>
-            HOLA,<br />SOY<br />
-            <span className={styles.heroAccent}>JUAN.</span>
-          </h1>
+          <motion.h1 className={styles.heroTitle} variants={staggerContainer}>
+            {h.greeting.map((line, i) => (
+              <motion.span key={i} variants={fadeLeft} style={{ display: 'block' }}>
+                {line}
+              </motion.span>
+            ))}
+            <motion.span
+              className={styles.heroAccent}
+              variants={fadeLeft}
+              style={{ display: 'block' }}
+            >
+              {h.name}
+            </motion.span>
+          </motion.h1>
 
-          <p className={styles.heroDesc}>
-            Desarrollo páginas web y automatizo procesos con WhatsApp
-            para negocios que quieren crecer en digital. Trabajo con
-            empresas locales y clientes remotos.
-          </p>
+          <motion.p className={styles.heroDesc} variants={fadeUp}>
+            {h.description}
+          </motion.p>
 
-          <div className={styles.heroActions}>
+          <motion.div className={styles.heroActions} variants={fadeUp}>
             <a
               href="https://wa.me/+573150290803"
               target="_blank"
@@ -52,19 +82,25 @@ export default function Hero({ onOpenCV }) {
               className={`${styles.btn} ${styles.btnPrimary}`}
             >
               <MessageCircle size={16} />
-              <span>WhatsApp</span>
+              <span>{h.whatsapp}</span>
             </a>
             <button
               className={`${styles.btn} ${styles.btnGhost}`}
               onClick={onOpenCV}
             >
-              Descargar CV
+              {h.downloadCV}
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* RIGHT — foto + stats card */}
-        <div className={styles.heroRight}>
+        <motion.div
+          className={styles.heroRight}
+          variants={fadeRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
           <div className={styles.statsCard}>
 
             {/* header de la card */}
@@ -87,25 +123,25 @@ export default function Hero({ onOpenCV }) {
             {/* stats */}
             <div className={styles.cardBody}>
               <div className={styles.statRow}>
-                <span className={styles.statLabel}>Proyectos</span>
+                <span className={styles.statLabel}>{h.stats.projects}</span>
                 <span className={styles.statValue}>8+</span>
               </div>
               <div className={styles.statRow}>
-                <span className={styles.statLabel}>Años exp.</span>
+                <span className={styles.statLabel}>{h.stats.experience}</span>
                 <span className={styles.statValue}>5+</span>
               </div>
               <div className={styles.statRow}>
-                <span className={styles.statLabel}>Disponible</span>
-                <span className={`${styles.statValue} ${styles.available}`}>● SÍ</span>
+                <span className={styles.statLabel}>{h.stats.available}</span>
+                <span className={`${styles.statValue} ${styles.available}`}>{h.stats.availableValue}</span>
               </div>
               <div className={styles.statRow}>
-                <span className={styles.statLabel}>Base</span>
+                <span className={styles.statLabel}>{h.stats.base}</span>
                 <span className={`${styles.statValue} ${styles.statSmall}`}>COL 🇨🇴</span>
               </div>
             </div>
 
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

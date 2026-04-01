@@ -1,5 +1,10 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './ProjectCard.module.css';
+import { viewportConfig } from '@/hooks/useScrollReveal';
 
 const TECH_COLORS = {
   'React':        'blue',
@@ -41,8 +46,10 @@ export default function ProjectCard({
   featured = false,
   onSelect,
 }) {
+  const { strings } = useLanguage();
+
   return (
-    <article
+    <motion.article
       className={`${styles.card} ${featured ? styles.featured : ''}`}
       role="button"
       tabIndex={0}
@@ -52,6 +59,14 @@ export default function ProjectCard({
           e.preventDefault();
           onSelect?.();
         }
+      }}
+      initial={{ opacity: 0, y: featured ? 60 : 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={viewportConfig}
+      transition={{
+        duration: featured ? 0.45 : 0.3,
+        ease: 'easeOut',
+        delay: featured ? 0 : 0.05,
       }}
     >
       {/* THUMBNAIL */}
@@ -77,7 +92,6 @@ export default function ProjectCard({
 
       {/* BODY */}
       <div className={styles.body}>
-        {/* número de proyecto */}
         <span className={styles.projectNum}>
           {String(id).padStart(2, '0')} —
         </span>
@@ -85,7 +99,6 @@ export default function ProjectCard({
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.desc}>{description}</p>
 
-        {/* tecnologías */}
         {technologies.length > 0 && (
           <div className={styles.tags}>
             {technologies.slice(0, 4).map((tech) => (
@@ -101,8 +114,8 @@ export default function ProjectCard({
           </div>
         )}
 
-        <span className={styles.cta}>Ver detalles →</span>
+        <span className={styles.cta}>{strings.projects.cta}</span>
       </div>
-    </article>
+    </motion.article>
   );
 }

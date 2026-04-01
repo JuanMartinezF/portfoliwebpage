@@ -151,3 +151,34 @@
     border-bottom: none;
   }
 }
+
+/* ── LANGUAGE TOGGLE ────────────────────── */
+.langToggle {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: none;
+  border: 2px solid #2D6BE4;
+  color: #2D6BE4;
+  height: 32px;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.langToggle:hover {
+  background: #2D6BE4;
+  color: #0A0A0A;
+}
+
+@media (max-width: 768px) {
+  .langToggle {
+    margin-left: 8px;
+    height: 36px;
+    padding: 0 10px;
+  }
+}

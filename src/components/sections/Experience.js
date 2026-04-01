@@ -1,24 +1,52 @@
-import experiencesData from '@/data/experiences.json';
+'use client';
+
+import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './Experience.module.css';
+import {
+  fadeLeft,
+  staggerContainer,
+  staggerItem,
+  viewportConfig,
+} from '@/hooks/useScrollReveal';
 
 export default function Experience() {
+  const { experiences, strings } = useLanguage();
+  const s = strings.experience;
+
   // más reciente primero
-  const sorted = [...experiencesData].reverse();
+  const sorted = [...experiences].reverse();
 
   return (
     <section id="experience" className={styles.section}>
       <div className={styles.inner}>
 
         {/* ── HEADER ── */}
-        <div className={styles.sectionHeader}>
-          <span className={styles.sectionNumber}>01</span>
-          <h2 className={styles.sectionTitle}>EXPERIENCIA</h2>
-        </div>
+        <motion.div
+          className={styles.sectionHeader}
+          variants={fadeLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
+          <span className={styles.sectionNumber}>{s.sectionNumber}</span>
+          <h2 className={styles.sectionTitle}>{s.sectionTitle}</h2>
+        </motion.div>
 
         {/* ── LISTA ── */}
-        <div className={styles.list}>
+        <motion.div
+          className={styles.list}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
           {sorted.map((exp, index) => (
-            <div key={exp.id} className={styles.item}>
+            <motion.div
+              key={exp.id}
+              className={styles.item}
+              variants={staggerItem}
+            >
 
               {/* columna izquierda — fecha */}
               <div className={styles.dateCol}>
@@ -40,9 +68,9 @@ export default function Experience() {
                 <p className={styles.description}>{exp.description}</p>
               </div>
 
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

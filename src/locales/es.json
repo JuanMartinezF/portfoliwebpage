@@ -1,0 +1,101 @@
+{
+  "lang": "es",
+
+  "nav": {
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "technologies": "Tecnologías",
+    "cta": "Hablemos →"
+  },
+
+  "hero": {
+    "location": "📍 Popayán, Colombia",
+    "greeting": ["HOLA,", "SOY"],
+    "name": "JUAN.",
+    "description": "Desarrollo páginas web y automatizo procesos con WhatsApp para negocios que quieren crecer en digital. Trabajo con empresas locales y clientes remotos.",
+    "whatsapp": "WhatsApp",
+    "downloadCV": "Descargar CV",
+    "stats": {
+      "projects": "Proyectos",
+      "experience": "Años exp.",
+      "available": "Disponible",
+      "availableValue": "● SÍ",
+      "base": "Base"
+    }
+  },
+
+  "experience": {
+    "sectionNumber": "01",
+    "sectionTitle": "EXPERIENCIA"
+  },
+
+  "projects": {
+    "sectionNumber": "02",
+    "sectionTitle": "PROYECTOS",
+    "cta": "Ver detalles →"
+  },
+
+  "technologies": {
+    "sectionNumber": "03",
+    "sectionTitle": "TECNOLOGÍAS",
+    "categories": {
+      "languages": "Lenguajes",
+      "frameworks": "Frameworks & Librerías",
+      "tools": "Herramientas",
+      "learning": "Actualmente aprendiendo"
+    },
+    "levels": {
+      "Basico": "Básico",
+      "Básico": "Básico",
+      "Intermedio": "Intermedio",
+      "Avanzado": "Avanzado"
+    },
+    "learningBadge": "En progreso"
+  },
+
+  "footer": {
+    "copy": "© {year} Juan Carlos Martínez — Popayán, Colombia",
+    "band": ["IMPULSADO POR CAFÉ ☕", "HECHO EN POPAYÁN, COLOMBIA"]
+  },
+
+  "contactModal": {
+    "eyebrow": "▸ CONTACTO",
+    "title": "HABLEMOS.",
+    "subtitle": "¿Tienes un proyecto? Respondo el mismo día.",
+    "tabLinks": "Contacto directo",
+    "tabForm": "Enviar mensaje",
+    "whatsappValue": "Escríbeme directo",
+    "form": {
+      "labelName": "Tu nombre",
+      "placeholderName": "Ej: Carlos Pérez",
+      "labelEmail": "Tu correo",
+      "placeholderEmail": "tucorreo@gmail.com",
+      "labelMessage": "¿En qué te puedo ayudar?",
+      "placeholderMessage": "Cuéntame brevemente tu proyecto...",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "successTitle": "¡Mensaje enviado!",
+      "successText": "Te respondo en menos de 24 horas.",
+      "successBtn": "Enviar otro →",
+      "errorTitle": "Algo salió mal",
+      "errorText": "Intenta de nuevo o escríbeme por WhatsApp.",
+      "errorBtn": "Intentar de nuevo →"
+    },
+    "close": "Cerrar"
+  },
+
+  "cvModal": {
+    "eyebrow": "▸ CURRICULUM VITAE",
+    "title": "DESCARGA\nMI CV.",
+    "subtitle": "Selecciona el idioma de tu preferencia",
+    "options": [
+      { "lang": "Español", "label": "Curriculum Vitae" },
+      { "lang": "English", "label": "Resume" }
+    ]
+  },
+
+  "projectModal": {
+    "eyebrow": "▸ PROYECTO DESTACADO",
+    "docCta": "📄 Ver documentación →"
+  }
+}

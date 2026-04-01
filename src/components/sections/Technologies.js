@@ -1,17 +1,34 @@
+'use client';
+
 import Image from 'next/image';
-import technologiesData from '@/data/technologies.json';
+import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './Technologies.module.css';
+import {
+  fadeLeft,
+  staggerContainer,
+  staggerItem,
+  fadeUp,
+  viewportConfig,
+} from '@/hooks/useScrollReveal';
 
-const LEVEL_WIDTH = {
-  'Básico':      '35%',
-  'Basico':      '35%',
-  'Intermedio':  '65%',
-  'Avanzado':    '90%',
-};
+import technologiesData from '@/data/technologies.json';
 
-function TechItem({ tech, learning = false }) {
+// Technologies names are universal; only levels and labels translate
+function TechItem({ tech, learning = false, strings }) {
+  const levelLabel = strings.technologies.levels[tech.level] || tech.level;
+  const learningBadge = strings.technologies.learningBadge;
+
+  const LEVEL_WIDTH = {
+    'Básico': '35%', 'Basico': '35%',
+    'Intermedio': '65%', 'Avanzado': '90%',
+  };
+
   return (
-    <div className={`${styles.techItem} ${learning ? styles.techItemLearning : ''}`}>
+    <motion.div
+      className={`${styles.techItem} ${learning ? styles.techItemLearning : ''}`}
+      variants={staggerItem}
+    >
       <div className={styles.techIcon}>
         <Image
           src={tech.icon}
@@ -24,10 +41,10 @@ function TechItem({ tech, learning = false }) {
       <div className={styles.techInfo}>
         <span className={styles.techName}>{tech.name}</span>
         {learning ? (
-          <span className={styles.learningBadge}>En progreso</span>
+          <span className={styles.learningBadge}>{learningBadge}</span>
         ) : (
           <>
-            <span className={styles.techLevel}>{tech.level}</span>
+            <span className={styles.techLevel}>{levelLabel}</span>
             <div className={styles.techBar}>
               <div
                 className={styles.techBarFill}
@@ -37,77 +54,122 @@ function TechItem({ tech, learning = false }) {
           </>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 export default function Technologies() {
+  const { strings } = useLanguage();
+  const s = strings.technologies;
+
   return (
     <section id="technologies" className={styles.section}>
       <div className={styles.inner}>
 
         {/* ── HEADER ── */}
-        <div className={styles.sectionHeader}>
-          <span className={styles.sectionNumber}>03</span>
-          <h2 className={styles.sectionTitle}>TECNOLOGÍAS</h2>
-        </div>
+        <motion.div
+          className={styles.sectionHeader}
+          variants={fadeLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
+          <span className={styles.sectionNumber}>{s.sectionNumber}</span>
+          <h2 className={styles.sectionTitle}>{s.sectionTitle}</h2>
+        </motion.div>
 
         {/* ── CATEGORÍAS ── */}
-        <div className={styles.categories}>
+        <motion.div
+          className={styles.categories}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
 
           {/* Lenguajes */}
-          <div className={styles.category}>
+          <motion.div className={styles.category} variants={fadeUp}>
             <div className={styles.catHeader}>
-              <span className={styles.catTitle}>Lenguajes</span>
+              <span className={styles.catTitle}>{s.categories.languages}</span>
               <span className={styles.catCount}>{technologiesData.programming.length}</span>
             </div>
-            <div className={styles.techGrid}>
+            <motion.div
+              className={styles.techGrid}
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportConfig}
+            >
               {technologiesData.programming.map((tech) => (
-                <TechItem key={tech.name} tech={tech} />
+                <TechItem key={tech.name} tech={tech} strings={strings} />
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Frameworks */}
-          <div className={`${styles.category} ${styles.categoryWide}`}>
+          <motion.div className={`${styles.category} ${styles.categoryWide}`} variants={fadeUp}>
             <div className={styles.catHeader}>
-              <span className={styles.catTitle}>Frameworks & Librerías</span>
+              <span className={styles.catTitle}>{s.categories.frameworks}</span>
               <span className={styles.catCount}>{technologiesData.frameworks.length}</span>
             </div>
-            <div className={styles.techGrid}>
+            <motion.div
+              className={styles.techGrid}
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportConfig}
+            >
               {technologiesData.frameworks.map((tech) => (
-                <TechItem key={tech.name} tech={tech} />
+                <TechItem key={tech.name} tech={tech} strings={strings} />
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Herramientas */}
-          <div className={styles.category}>
+          <motion.div className={styles.category} variants={fadeUp}>
             <div className={styles.catHeader}>
-              <span className={styles.catTitle}>Herramientas</span>
+              <span className={styles.catTitle}>{s.categories.tools}</span>
               <span className={styles.catCount}>{technologiesData.tools.length}</span>
             </div>
-            <div className={styles.techGrid}>
+            <motion.div
+              className={styles.techGrid}
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportConfig}
+            >
               {technologiesData.tools.map((tech) => (
-                <TechItem key={tech.name} tech={tech} />
+                <TechItem key={tech.name} tech={tech} strings={strings} />
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-        </div>
+        </motion.div>
 
         {/* ── APRENDIENDO ── */}
-        <div className={styles.learningSection}>
+        <motion.div
+          className={styles.learningSection}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
           <div className={styles.learningHeader}>
-            <span className={styles.catTitle}>Actualmente aprendiendo</span>
+            <span className={styles.catTitle}>{s.categories.learning}</span>
             <span className={styles.learningDot}>●</span>
           </div>
-          <div className={styles.learningGrid}>
+          <motion.div
+            className={styles.learningGrid}
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+          >
             {technologiesData.learning.map((tech) => (
-              <TechItem key={tech.name} tech={tech} learning />
+              <TechItem key={tech.name} tech={tech} strings={strings} learning />
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
       </div>
     </section>

@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './ProjectModal.module.css';
 
 const TECH_COLORS = {
@@ -10,6 +13,9 @@ const TECH_COLORS = {
 };
 
 export default function ProjectModal({ project, onClose }) {
+  const { strings } = useLanguage();
+  const m = strings.projectModal;
+
   if (!project) return null;
 
   return (
@@ -31,12 +37,12 @@ export default function ProjectModal({ project, onClose }) {
               {project.title.slice(0, 2).toUpperCase()}
             </span>
           )}
-          <button className={styles.close} onClick={onClose} aria-label="Cerrar">×</button>
+          <button className={styles.close} onClick={onClose} aria-label="Close">×</button>
         </div>
 
         {/* body */}
         <div className={styles.body}>
-          <div className={styles.eyebrow}>▸ PROYECTO DESTACADO</div>
+          <div className={styles.eyebrow}>{m.eyebrow}</div>
           <h3 className={styles.title}>{project.title}</h3>
 
           {/* descripción larga */}
@@ -81,7 +87,7 @@ export default function ProjectModal({ project, onClose }) {
               rel="noopener noreferrer"
               className={styles.cta}
             >
-              📄 Ver documentación →
+              {m.docCta}
             </a>
           )}
         </div>

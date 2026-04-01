@@ -1,8 +1,9 @@
 import "./globals.css";
+import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata = {
   title: "JuanC",
-  description: "Portafolio de Juan Carlos Martínez Fernández - Desarrollador",
+  description: "Portfolio of Juan Carlos Martínez Fernández - Developer",
 };
 
 export const viewport = {
@@ -20,8 +21,11 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }
-

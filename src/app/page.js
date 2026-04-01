@@ -1,7 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 import Header from '@/components/layout/Header';
+import { fadeLeft, viewportConfig } from '@/hooks/useScrollReveal';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import AboutMobile from '@/components/sections/AboutMobile';
@@ -11,16 +14,17 @@ import ProjectCard from '@/components/sections/ProjectCard';
 import ProjectModal from '@/components/modals/ProjectModal';
 import CVModal from '@/components/modals/CVModal';
 import ContactModal from '@/components/modals/ContactModal';
-import projectsData from '@/data/projects.json';
 import styles from './page.module.css';
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(null);
   const [isCVModalOpen, setIsCVModalOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const { projects, strings } = useLanguage();
+  const s = strings.projects;
 
-  const featured = projectsData.find((p) => p.id === 6);
-  const rest = projectsData.filter((p) => p.id !== 6);
+  const featured = projects.find((p) => p.id === 6);
+  const rest = projects.filter((p) => p.id !== 6);
 
   return (
     <>
@@ -36,10 +40,16 @@ export default function Home() {
 
           <section id="projects" className={styles.projectsSection}>
             <div className={styles.projectsInner}>
-              <div className={styles.sectionHeader}>
-                <span className={styles.sectionNumber}>02</span>
-                <h2 className={styles.sectionTitle}>PROYECTOS</h2>
-              </div>
+              <motion.div
+                className={styles.sectionHeader}
+                variants={fadeLeft}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportConfig}
+              >
+                <span className={styles.sectionNumber}>{s.sectionNumber}</span>
+                <h2 className={styles.sectionTitle}>{s.sectionTitle}</h2>
+              </motion.div>
               <div className={styles.grid}>
                 {featured && (
                   <ProjectCard

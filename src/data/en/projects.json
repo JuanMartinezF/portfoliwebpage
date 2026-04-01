@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "title": "ML Tool for Cardiac Health Assessment with ECG",
+    "description": "Machine learning model to analyze ECG signals and estimate the cardiac health of athletes.",
+    "longDescription": "I developed a software tool that integrates ECG signal processing and machine learning models to evaluate cardiac health indicators in athletes. I built the dataset from Kaggle and Physionet, processed signals, and migrated data to train a neural network in MATLAB. I also participated in model integration with a graphical interface using AppDesigner, resolving backend and frontend issues.",
+    "image": "/proyectos/sht.png",
+    "pdfUrl": "/proyectos/ManlUsuSHT.pdf",
+    "highlights": [
+      "94% accuracy validated with clinical datasets",
+      "Serverless architecture with event queues"
+    ],
+    "technologies": ["Python", "Numpy", "Pandas", "Matplotlib", "MATLAB", "Seaborn", "AppDesigner", "HTML"],
+    "variant": "default"
+  },
+  {
+    "id": 2,
+    "title": "Mango Leaf Disease Detection (Computer Vision)",
+    "description": "Computer vision system in MATLAB to detect infected areas in mango leaves.",
+    "longDescription": "I developed a desktop image processing application to segment mango leaves and identify infected zones. I implemented filters, basic kernels, and segmentation across different color spaces (RGB, HSV, YCbCr) to improve contour and region detection.",
+    "image": "/proyectos/Logo app.png",
+    "pdfUrl": "/proyectos/Manual de usuario AppMangoHealth.pdf",
+    "highlights": [
+      "Streaming data ingestion",
+      "Image segmentation across multiple color spaces"
+    ],
+    "technologies": ["MATLAB", "AppDesigner"],
+    "variant": "alt"
+  },
+  {
+    "id": 3,
+    "title": "Physician Data Acquisition",
+    "description": "Large-scale data extraction and cleaning of physician records from a website.",
+    "longDescription": "I developed scraping scripts to extract information such as name, address, and consultation cost from multiple pages. I implemented cleaning, validation, and consolidation processes, delivering the final data in Excel format for further analysis.",
+    "image": "/proyectos/dotorspage.png",
+    "pdfUrl": "https://github.com/JuanMartinezF/Scraping-Doctor-s-Page",
+    "highlights": [
+      "Multi-page web scraping",
+      "Data cleaning and validation",
+      "HTML and XML structures"
+    ],
+    "technologies": ["Excel", "Python", "BeautifulSoup", "Requests", "Pandas"],
+    "variant": "default"
+  },
+  {
+    "id": 4,
+    "title": "Notary Data Acquisition",
+    "description": "Scraping system to extract over 10,000 notary records and generate structured datasets.",
+    "longDescription": "I built a data acquisition pipeline using Selenium, BeautifulSoup, and Requests to extract contact information at scale. I processed and structured the data with Pandas and NumPy, delivering the final output as CSV files ready for analysis and commercial use.",
+    "image": "/proyectos/prub.png",
+    "pdfUrl": "https://github.com/JuanMartinezF/Data_Scraping_Notaries",
+    "highlights": [
+      "Automated scraping pipeline creation",
+      "Extraction of over 100,000 records",
+      "CSV dataset generation"
+    ],
+    "technologies": ["Python", "BeautifulSoup", "Pandas", "Requests", "Numpy", "HTML", "XML"],
+    "variant": "alt"
+  },
+  {
+    "id": 5,
+    "title": "Python Web Development (Réflex)",
+    "description": "Frontend and UI/UX for a conference website using Réflex.",
+    "longDescription": "I participated in UI/UX design and developed frontend sections using Réflex (Python framework), integrating HTML, CSS, JavaScript, and Tailwind. Focus on responsive design and user experience.",
+    "image": "/proyectos/congresofisica.png",
+    "pdfUrl": "",
+    "highlights": [
+      "UI/UX Design",
+      "Frontend development with Réflex",
+      "Tailwind CSS implementation"
+    ],
+    "technologies": ["Python", "Réflex", "HTML", "CSS", "JavaScript", "Tailwind CSS"],
+    "variant": "default"
+  },
+  {
+    "id": 6,
+    "title": "Fullstack Web Development",
+    "description": "Design, development, and deployment of a fullstack website for a client.",
+    "longDescription": "I gathered requirements, designed mockups in Framer, and developed the complete frontend using React, JavaScript, and TypeScript. I implemented styles with Tailwind CSS, integrated a functional contact form, optimized basic SEO, and deployed via FileZilla and Hostinger. I also generated graphic assets using AI and Canva.",
+    "image": "/proyectos/servitaxipage.png",
+    "pdfUrl": "https://www.servitaxipopayan.com.co",
+    "highlights": [
+      "Frontend development with React/TypeScript",
+      "Basic SEO optimization",
+      "Hosting deployment",
+      "Image creation with Canva and AI"
+    ],
+    "technologies": ["React", "TypeScript", "HTML", "CSS", "JavaScript", "Git", "GitHub"],
+    "variant": "alt"
+  },
+  {
+    "id": 7,
+    "title": "Image Classification Model with Deep Learning",
+    "description": "Image classification using convolutional neural networks (CNN) with TensorFlow and Keras.",
+    "longDescription": "I assisted in the development of a deep learning model to classify images into different categories. I used TensorFlow and Keras to build and train a convolutional neural network (CNN), applying data augmentation and optimization techniques to improve model accuracy.",
+    "image": "/proyectos/segmenta3.png",
+    "pdfUrl": ""
+  },
+  {
+    "id": 8,
+    "title": "This Portfolio Website",
+    "description": "Layout, structure, and development of my personal portfolio website.",
+    "longDescription": [
+      "I designed and developed my portfolio website using Next.js and React for the frontend, implementing styles with Tailwind CSS. I organized the project structure, integrated reusable components, and optimized performance for a better user experience.",
+      "This project allowed me to apply good programming practices and continue improving my skills in web and software development."
+    ],
+    "image": "/proyectos/portfolio.png",
+    "pdfUrl": "",
+    "highlights": [
+      "Built with Next.js and React",
+      "Styled with Tailwind CSS",
+      "Performance optimization",
+      "Best coding practices",
+      "Version control with Git and GitHub"
+    ],
+    "technologies": ["Next.js", "React", "Tailwind CSS", "JavaScript", "Git", "GitHub"],
+    "variant": "default"
+  }
+]

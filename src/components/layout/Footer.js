@@ -1,6 +1,13 @@
+'use client';
+
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+  const { strings } = useLanguage();
+  const f = strings.footer;
+  const year = new Date().getFullYear();
+
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
@@ -8,7 +15,7 @@ export default function Footer() {
         <div className={styles.logo}>JCMF</div>
 
         <div className={styles.copy}>
-          © {new Date().getFullYear()} Juan Carlos Martínez — Popayán, Colombia
+          {f.copy.replace('{year}', year)}
         </div>
 
         <div className={styles.links}>
@@ -18,20 +25,16 @@ export default function Footer() {
           <a href="https://www.linkedin.com/in/juan-mart%C3%ADnez-f/" target="_blank" rel="noopener noreferrer" className={styles.link}>
             LinkedIn
           </a>
-          <a href="https://instagram.com/juancmartinezf" target="_blank" rel="noopener noreferrer" className={styles.link}>
-            Instagram
-          </a>
         </div>
 
       </div>
 
       {/* banda inferior */}
       <div className={styles.band}>
-        <span>IMPULSADO POR CAFÉ ☕</span>
+        <span>{f.band[0]}</span>
         <span className={styles.bandDot}>◆</span>
-        <span>HECHO EN POPAYÁN</span>
+        <span>{f.band[1]}</span>
         <span className={styles.bandDot}>◆</span>
-        <span>NEXT.JS + NEO BRUTALISM</span>
       </div>
     </footer>
   );

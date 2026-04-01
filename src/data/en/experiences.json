@@ -1,0 +1,44 @@
+[
+  {
+    "id": 6,
+    "date": "2024 | March – June",
+    "role": "ML Engineer / Data Scientist",
+    "company": "Universidad del Cauca (Research Project)",
+    "description": "Developed a machine learning tool for ECG signal analysis and cardiac health assessment in athletes, integrating models with a desktop application built in MATLAB."
+  },
+  {
+    "id": 5,
+    "date": "2024 | July",
+    "role": "Junior Data Engineer",
+    "company": "Freelance / Upwork",
+    "description": "Built a data acquisition, cleaning, and consolidation pipeline for physicians from a web source, delivering a structured database in Excel format."
+  },
+  {
+    "id": 4,
+    "date": "2024 | August – December",
+    "role": "Deep Learning Engineer",
+    "company": "Universidad del Cauca",
+    "description": "Developed a desktop computer vision application for segmentation and disease detection in mango leaves using image processing in MATLAB."
+  },
+  {
+    "id": 3,
+    "date": "2025 | April",
+    "role": "Data Engineer",
+    "company": "Freelance / Upwork",
+    "description": "Built a large-scale scraping system to extract over 48,000 notary records, generating structured CSV datasets ready for analysis."
+  },
+  {
+    "id": 2,
+    "date": "2025 | May – June",
+    "role": "Frontend Web Developer",
+    "company": "Universidad del Cauca",
+    "description": "Built frontend sections and UI/UX design for a conference website using Réflex, HTML, CSS, JavaScript, and Tailwind CSS."
+  },
+  {
+    "id": 1,
+    "date": "2025 - 2026 | June - April",
+    "role": "Full Stack Developer",
+    "company": "Servitaxi S.A.",
+    "description": "Designed, developed, and deployed a fullstack website for a client, including a React/TypeScript frontend, functional contact form, basic SEO optimization, and hosting deployment."
+  }
+]

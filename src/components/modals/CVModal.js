@@ -1,6 +1,12 @@
+'use client';
+
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './CVModal.module.css';
 
 export default function CVModal({ isOpen, onClose }) {
+  const { strings } = useLanguage();
+  const c = strings.cvModal;
+
   if (!isOpen) return null;
 
   return (
@@ -10,11 +16,15 @@ export default function CVModal({ isOpen, onClose }) {
         {/* header */}
         <div className={styles.header}>
           <div>
-            <div className={styles.eyebrow}>▸ CURRICULUM VITAE</div>
-            <h3 className={styles.title}>DESCARGA<br />MI CV.</h3>
-            <p className={styles.subtitle}>Selecciona el idioma de tu preferencia</p>
+            <div className={styles.eyebrow}>{c.eyebrow}</div>
+            <h3 className={styles.title}>
+              {c.title.split('\n').map((line, i) => (
+                <span key={i}>{line}{i === 0 && <br />}</span>
+              ))}
+            </h3>
+            <p className={styles.subtitle}>{c.subtitle}</p>
           </div>
-          <button className={styles.close} onClick={onClose} aria-label="Cerrar">×</button>
+          <button className={styles.close} onClick={onClose} aria-label="Close">×</button>
         </div>
 
         {/* opciones */}
@@ -26,8 +36,8 @@ export default function CVModal({ isOpen, onClose }) {
           >
             <div className={styles.flag}>🇪🇸</div>
             <div className={styles.optionContent}>
-              <span className={styles.optionName}>Español</span>
-              <span className={styles.optionValue}>Curriculum Vitae</span>
+              <span className={styles.optionName}>{c.options[0].lang}</span>
+              <span className={styles.optionValue}>{c.options[0].label}</span>
             </div>
             <div className={styles.downloadIcon}>↓</div>
           </a>
@@ -39,8 +49,8 @@ export default function CVModal({ isOpen, onClose }) {
           >
             <div className={styles.flag}>🇺🇸</div>
             <div className={styles.optionContent}>
-              <span className={styles.optionName}>English</span>
-              <span className={styles.optionValue}>Resume</span>
+              <span className={styles.optionName}>{c.options[1].lang}</span>
+              <span className={styles.optionValue}>{c.options[1].label}</span>
             </div>
             <div className={styles.downloadIcon}>↓</div>
           </a>

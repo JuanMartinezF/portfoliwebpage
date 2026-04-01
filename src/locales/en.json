@@ -1,0 +1,101 @@
+{
+  "lang": "en",
+
+  "nav": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "technologies": "Technologies",
+    "cta": "Let's Talk →"
+  },
+
+  "hero": {
+    "location": "📍 Popayán, Colombia",
+    "greeting": ["HI,", "I AM"],
+    "name": "JUAN.",
+    "description": "I build websites and automate processes with WhatsApp for businesses looking to grow online. I work with local companies and remote clients.",
+    "whatsapp": "WhatsApp",
+    "downloadCV": "Download CV",
+    "stats": {
+      "projects": "Projects",
+      "experience": "Yrs exp.",
+      "available": "Available",
+      "availableValue": "● YES",
+      "base": "Base"
+    }
+  },
+
+  "experience": {
+    "sectionNumber": "01",
+    "sectionTitle": "EXPERIENCE"
+  },
+
+  "projects": {
+    "sectionNumber": "02",
+    "sectionTitle": "PROJECTS",
+    "cta": "See details →"
+  },
+
+  "technologies": {
+    "sectionNumber": "03",
+    "sectionTitle": "TECHNOLOGIES",
+    "categories": {
+      "languages": "Languages",
+      "frameworks": "Frameworks & Libraries",
+      "tools": "Tools",
+      "learning": "Currently learning"
+    },
+    "levels": {
+      "Basico": "Basic",
+      "Básico": "Basic",
+      "Intermedio": "Intermediate",
+      "Avanzado": "Advanced"
+    },
+    "learningBadge": "In progress"
+  },
+
+  "footer": {
+    "copy": "© {year} Juan Carlos Martínez — Popayán, Colombia",
+    "band": ["POWERED BY COFFEE ☕", "MADE IN POPAYÁN, COLOMBIA"]
+  },
+
+  "contactModal": {
+    "eyebrow": "▸ CONTACT",
+    "title": "LET'S TALK.",
+    "subtitle": "Have a project? I reply the same day.",
+    "tabLinks": "Direct contact",
+    "tabForm": "Send a message",
+    "whatsappValue": "Message me directly",
+    "form": {
+      "labelName": "Your name",
+      "placeholderName": "E.g: John Smith",
+      "labelEmail": "Your email",
+      "placeholderEmail": "youremail@gmail.com",
+      "labelMessage": "How can I help you?",
+      "placeholderMessage": "Briefly describe your project...",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "successTitle": "Message sent!",
+      "successText": "I'll get back to you within 24 hours.",
+      "successBtn": "Send another →",
+      "errorTitle": "Something went wrong",
+      "errorText": "Please try again or reach me on WhatsApp.",
+      "errorBtn": "Try again →"
+    },
+    "close": "Close"
+  },
+
+  "cvModal": {
+    "eyebrow": "▸ CURRICULUM VITAE",
+    "title": "DOWNLOAD\nMY CV.",
+    "subtitle": "Choose your preferred language",
+    "options": [
+      { "lang": "Español", "label": "Curriculum Vitae" },
+      { "lang": "English", "label": "Resume" }
+    ]
+  },
+
+  "projectModal": {
+    "eyebrow": "▸ FEATURED PROJECT",
+    "docCta": "📄 View documentation →"
+  }
+}
