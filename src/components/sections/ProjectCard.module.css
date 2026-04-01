@@ -1,27 +1,28 @@
 /* ══════════════════════════════════════════
-   PROJECT CARD — Neo Brutalism
+   PROJECT CARD — Neo Brutalism (theme-aware)
 ══════════════════════════════════════════ */
 
 /* ── CARD BASE ───────────────────────── */
 .card {
-  border: 3px solid #333;
-  background: #111;
+  border: 3px solid var(--nb-bd);
+  background: var(--nb-bg2);
   cursor: pointer;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  box-shadow: 6px 6px 0 var(--nb-black);
 }
 
 .card:hover {
   transform: translate(-4px, -4px);
-  box-shadow: 8px 8px 0 #2D6BE4;
-  border-color: #2D6BE4;
+  box-shadow: 8px 8px 0 var(--nb-blue);
+  border-color: var(--nb-blue);
 }
 
 .card:focus-visible {
-  outline: 3px solid #2D6BE4;
+  outline: 3px solid var(--nb-blue);
   outline-offset: 2px;
 }
 
@@ -35,11 +36,11 @@
   min-height: 280px;
   flex: 1;
   border-bottom: none;
-  border-right: 3px solid #333;
+  border-right: 3px solid var(--nb-bd);
 }
 
 .featured:hover .thumb {
-  border-color: #2D6BE4;
+  border-color: var(--nb-blue);
 }
 
 .featured .body {
@@ -54,14 +55,15 @@
 .featured .desc {
   font-size: 14px;
   -webkit-line-clamp: unset;
+  line-clamp: unset;
 }
 
 /* ── THUMBNAIL ───────────────────────── */
 .thumb {
   position: relative;
   min-height: 200px;
-  background: #0A0A0A;
-  border-bottom: 3px solid #333;
+  background: var(--nb-black);
+  border-bottom: 3px solid var(--nb-bd);
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -85,7 +87,7 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 48px;
   letter-spacing: 4px;
-  color: #2D6BE4;
+  color: var(--nb-blue);
   opacity: 0.4;
 }
 
@@ -94,16 +96,16 @@
   position: absolute;
   top: 16px;
   left: 0;
-  background: #2D6BE4;
-  color: #F5F0E8;
+  background: var(--nb-blue);
+  color: var(--nb-white);
   font-family: 'Space Mono', monospace;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 6px 14px;
-  border-right: 3px solid #0A0A0A;
-  border-bottom: 3px solid #0A0A0A;
+  border-right: 3px solid var(--nb-black);
+  border-bottom: 3px solid var(--nb-black);
   z-index: 1;
 }
 
@@ -113,7 +115,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: #111;
+  background: var(--nb-bg2);
 }
 
 .projectNum {
@@ -122,7 +124,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #2D6BE4;
+  color: var(--nb-blue);
   margin-bottom: 8px;
   display: block;
 }
@@ -131,7 +133,7 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 22px;
   letter-spacing: 1px;
-  color: #F5F0E8;
+  color: var(--nb-fg);
   margin: 0 0 10px;
   line-height: 1.1;
 }
@@ -139,12 +141,12 @@
 .desc {
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
-  line-height: 1.7;
-  color: #888;
-  margin-bottom: 20px;
-  flex: 1;
+  line-height: 1.6;
+  color: var(--nb-fg2);
+  margin: 0 0 auto;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -164,14 +166,14 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 4px 10px;
-  border: 2px solid #333;
+  border: 2px solid var(--nb-bd);
   border-radius: 0;
 }
 
-.badge_blue    { background: #2D6BE4; color: #F5F0E8; border-color: #2D6BE4; }
-.badge_green   { background: #00C566; color: #0A0A0A; border-color: #00C566; }
-.badge_gray    { background: #333;    color: #A09890; border-color: #444; }
-.badge_outline { background: transparent; color: #666; border-color: #333; }
+.badge_blue    { background: var(--nb-blue);  color: var(--nb-white); border-color: var(--nb-blue); }
+.badge_green   { background: var(--nb-green); color: var(--nb-black); border-color: var(--nb-green); }
+.badge_gray    { background: var(--nb-bd);    color: var(--nb-bg2);   border-color: var(--nb-bd); }
+.badge_outline { background: transparent;     color: var(--nb-fg3);   border-color: var(--nb-bd); }
 
 /* ── CTA ─────────────────────────────── */
 .cta {
@@ -180,7 +182,7 @@
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #2D6BE4;
+  color: var(--nb-blue);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -201,7 +203,7 @@
 
   .featured .thumb {
     border-right: none;
-    border-bottom: 3px solid #333;
+    border-bottom: 3px solid var(--nb-bd);
     min-height: 200px;
   }
 

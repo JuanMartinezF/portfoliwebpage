@@ -1,9 +1,9 @@
 /* ══════════════════════════════════════════
-   FOOTER — Neo Brutalism
+   FOOTER — Neo Brutalism (theme-aware)
 ══════════════════════════════════════════ */
 .footer {
-  background: #0A0A0A;
-  border-top: 3px solid #0A0A0A;
+  background: var(--nb-bg);
+  border-top: 3px solid var(--nb-black);
 }
 
 .inner {
@@ -21,13 +21,13 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 22px;
   letter-spacing: 4px;
-  color: #2D6BE4;
+  color: var(--nb-blue);
 }
 
 .copy {
   font-family: 'Space Mono', monospace;
   font-size: 10px;
-  color: #444;
+  color: var(--nb-fg3);
   letter-spacing: 1px;
 }
 
@@ -42,18 +42,18 @@
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #555;
+  color: var(--nb-fg3);
   text-decoration: none;
   transition: color 0.15s;
 }
 
 .link:hover {
-  color: #2D6BE4;
+  color: var(--nb-blue);
 }
 
 /* banda inferior */
 .band {
-  border-top: 2px solid #1A1A1A;
+  border-top: 2px solid var(--nb-bd2);
   padding: 10px 24px;
   display: flex;
   align-items: center;
@@ -64,12 +64,12 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #2A2A2A;
+  color: var(--nb-fg4);
 }
 
 .bandDot {
   font-size: 7px;
-  color: #2D6BE4;
+  color: var(--nb-blue);
   opacity: 0.4;
 }
 

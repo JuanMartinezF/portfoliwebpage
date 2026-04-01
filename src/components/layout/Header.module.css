@@ -1,12 +1,12 @@
 /* ══════════════════════════════════════════
-   HEADER — Neo Brutalism
+   HEADER — Neo Brutalism (theme-aware)
 ══════════════════════════════════════════ */
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #0A0A0A;
-  border-bottom: 3px solid #0A0A0A;
+  background: var(--nb-bg-hdr);
+  border-bottom: 3px solid var(--nb-black);
   height: 64px;
 }
 
@@ -25,7 +25,7 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 26px;
   letter-spacing: 4px;
-  color: #2D6BE4;
+  color: var(--nb-blue);
   cursor: pointer;
   user-select: none;
   transition: color 0.15s;
@@ -33,7 +33,7 @@
 }
 
 .logo:hover {
-  color: #F5F0E8;
+  color: var(--nb-fg);
 }
 
 /* ── NAV DESKTOP ───────────────────────── */
@@ -50,10 +50,10 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #F5F0E8;
+  color: var(--nb-fg);
   background: none;
   border: none;
-  border-right: 2px solid #1A1A1A;
+  border-right: 2px solid var(--nb-bd2);
   height: 100%;
   padding: 0 20px;
   cursor: pointer;
@@ -62,22 +62,22 @@
 }
 
 .navLink:hover {
-  background: #1A1A1A;
-  color: #2D6BE4;
+  background: var(--nb-hov);
+  color: var(--nb-blue);
 }
 
 /* CTA — último botón */
 .navCta {
-  background: #2D6BE4;
-  color: #F5F0E8;
+  background: var(--nb-blue);
+  color: var(--nb-white);
   border-right: none;
-  border-left: 3px solid #0A0A0A;
+  border-left: 3px solid var(--nb-black);
   padding: 0 24px;
 }
 
 .navCta:hover {
   background: #1A50C0;
-  color: #F5F0E8;
+  color: var(--nb-white);
 }
 
 /* ── HAMBURGER MOBILE ──────────────────── */
@@ -87,7 +87,7 @@
   justify-content: center;
   gap: 5px;
   background: none;
-  border: 2px solid #2D6BE4;
+  border: 2px solid var(--nb-blue);
   padding: 8px 10px;
   cursor: pointer;
   width: 44px;
@@ -98,7 +98,7 @@
   display: block;
   width: 100%;
   height: 2px;
-  background: #2D6BE4;
+  background: var(--nb-blue);
   transition: transform 0.2s, opacity 0.2s;
 }
 
@@ -110,6 +110,37 @@
 }
 .hamburgerActive .bar:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── CONTROLS (lang + theme) ─────────── */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.langToggle,
+.themeToggle {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: none;
+  border: 2px solid var(--nb-blue);
+  color: var(--nb-blue);
+  height: 32px;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.langToggle:hover,
+.themeToggle:hover {
+  background: var(--nb-blue);
+  color: var(--nb-black);
 }
 
 /* ── RESPONSIVE ────────────────────────── */
@@ -124,8 +155,8 @@
     top: 64px;
     left: 0;
     right: 0;
-    background: #0A0A0A;
-    border-bottom: 3px solid #0A0A0A;
+    background: var(--nb-bg-hdr);
+    border-bottom: 3px solid var(--nb-black);
     flex-direction: column;
     height: auto;
     z-index: 99;
@@ -139,7 +170,7 @@
     width: 100%;
     height: 52px;
     border-right: none;
-    border-bottom: 2px solid #1A1A1A;
+    border-bottom: 2px solid var(--nb-bd2);
     justify-content: flex-start;
     padding: 0 24px;
     display: flex;
@@ -150,35 +181,16 @@
     border-left: none;
     border-bottom: none;
   }
-}
 
-/* ── LANGUAGE TOGGLE ────────────────────── */
-.langToggle {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  background: none;
-  border: 2px solid #2D6BE4;
-  color: #2D6BE4;
-  height: 32px;
-  padding: 0 12px;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s;
-  white-space: nowrap;
-  margin-left: 12px;
-  flex-shrink: 0;
-}
-
-.langToggle:hover {
-  background: #2D6BE4;
-  color: #0A0A0A;
-}
-
-@media (max-width: 768px) {
-  .langToggle {
+  .controls {
     margin-left: 8px;
+    gap: 6px;
+  }
+
+  .langToggle,
+  .themeToggle {
     height: 36px;
-    padding: 0 10px;
+    padding: 0 8px;
+    font-size: 9px;
   }
 }

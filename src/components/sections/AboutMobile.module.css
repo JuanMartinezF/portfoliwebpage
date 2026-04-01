@@ -1,6 +1,5 @@
 /* ══════════════════════════════════════════
-   ABOUT MOBILE — solo visible en mobile
-   Neo Brutalism
+   ABOUT MOBILE — solo visible en mobile (theme-aware)
 ══════════════════════════════════════════ */
 
 /* oculto en desktop */
@@ -11,9 +10,9 @@
 @media (max-width: 768px) {
   .section {
     display: block;
-    background: #F5F0E8;
-    border-top: 3px solid #0A0A0A;
-    border-bottom: 3px solid #0A0A0A;
+    background: var(--nb-bg-alt);
+    border-top: 3px solid var(--nb-fg-alt);
+    border-bottom: 3px solid var(--nb-fg-alt);
   }
 
   .inner {
@@ -28,12 +27,12 @@
     justify-content: center;
     align-items: center;
     background: #111;
-    border-bottom: 3px solid #0A0A0A;
+    border-bottom: 3px solid var(--nb-black);
     padding: 28px;
   }
 
   .photo {
-    border: 3px solid #0A0A0A !important;
+    border: 3px solid var(--nb-black) !important;
     border-radius: 0 !important;
     width: 120px !important;
     height: 120px !important;
@@ -44,15 +43,15 @@
 
   .info {
     padding: 20px 24px;
-    border-bottom: 3px solid #0A0A0A;
-    background: #F5F0E8;
+    border-bottom: 3px solid var(--nb-fg-alt);
+    background: var(--nb-bg-alt);
   }
 
   .name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 28px;
     letter-spacing: 2px;
-    color: #0A0A0A;
+    color: var(--nb-fg-alt);
     line-height: 1.05;
     margin-bottom: 12px;
   }
@@ -70,22 +69,22 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 4px 10px;
-    border: 2px solid #0A0A0A;
-    color: #0A0A0A;
+    border: 2px solid var(--nb-fg-alt);
+    color: var(--nb-fg-alt);
     background: transparent;
   }
 
   .tag:first-child {
-    background: #2D6BE4;
-    color: #F5F0E8;
-    border-color: #2D6BE4;
+    background: var(--nb-blue);
+    color: var(--nb-white);
+    border-color: var(--nb-blue);
   }
 
   /* ── STATS ── */
   .stats {
     display: flex;
     align-items: stretch;
-    background: #0A0A0A;
+    background: var(--nb-black);
   }
 
   .stat {
@@ -108,7 +107,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 28px;
     letter-spacing: 1px;
-    color: #F5F0E8;
+    color: var(--nb-white);
     line-height: 1;
   }
 
@@ -116,7 +115,7 @@
     font-family: 'Space Mono', monospace !important;
     font-size: 13px !important;
     font-weight: 700 !important;
-    color: #00C566 !important;
+    color: var(--nb-green) !important;
     letter-spacing: 1px;
   }
 

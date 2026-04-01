@@ -1,10 +1,10 @@
 /* ══════════════════════════════════════════
-   PROJECTS SECTION — Neo Brutalism
+   PROJECTS SECTION — Neo Brutalism (theme-aware)
 ══════════════════════════════════════════ */
 .projectsSection {
-  background: #0A0A0A;
-  border-top: 3px solid #0A0A0A;
-  border-bottom: 3px solid #0A0A0A;
+  background: var(--nb-bg);
+  border-top: 3px solid var(--nb-black);
+  border-bottom: 3px solid var(--nb-black);
   padding: 100px 0;
 }
 
@@ -25,7 +25,7 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 80px;
   line-height: 1;
-  color: #2D6BE4;
+  color: var(--nb-blue);
   opacity: 0.2;
 }
 
@@ -34,7 +34,7 @@
   font-size: clamp(36px, 6vw, 60px);
   letter-spacing: 2px;
   line-height: 1;
-  color: #F5F0E8;
+  color: var(--nb-fg);
   margin: 0;
 }
 

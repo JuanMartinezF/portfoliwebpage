@@ -1,24 +1,64 @@
 @import "tailwindcss";
 
-/* Variables personalizadas */
+/* ══════════════════════════════════════════
+   NEOBRUTALIST THEME TOKENS
+   Toggle: html[data-theme="dark"] / html[data-theme="light"]
+══════════════════════════════════════════ */
+
+/* ── CONSTANTS (never change) ─────────── */
 :root {
-  --bg: #050710;
-  --deep: #071028;
-  --accent: #0b2886;
-  --muted: #cbd5e1;
-  --glass-border: rgba(255, 255, 255, 0.06);
-  --glass-bg: rgba(255, 255, 255, 0.02);
+  --nb-black:  #0A0A0A;
+  --nb-white:  #F5F0E8;
+  --nb-blue:   #2D6BE4;
+  --nb-green:  #00C566;
+  --nb-gray:   #8A8478;
   --container: 1100px;
-  --background: #ffffff;
-  --foreground: #171717;
-  --accental:#24832c;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── DARK MODE (default) ──────────────── */
+html[data-theme="dark"] {
+  --nb-bg:        #0A0A0A;   /* hero, projects, tech sections */
+  --nb-bg2:       #111111;   /* cards, secondary bg */
+  --nb-bg-alt:    #F5F0E8;   /* experience section (inverted) */
+  --nb-bg-hdr:    #0A0A0A;   /* header */
+
+  --nb-fg:        #F5F0E8;   /* primary text on dark bg */
+  --nb-fg-alt:    #0A0A0A;   /* text on alt (cream) bg */
+  --nb-fg2:       #A09890;   /* descriptions, subtitles */
+  --nb-fg3:       #888888;   /* dim text */
+  --nb-fg4:       #666666;   /* subtlest text */
+
+  --nb-bd:        #333333;   /* card border color */
+  --nb-bd2:       #1A1A1A;   /* subtle inner separators */
+  --nb-bd-alt:    #E0DAD0;   /* borders on cream alt bg */
+
+  --nb-hov:       #1A1A1A;   /* hover bg on dark */
+  --nb-hov-alt:   #EDE8DF;   /* hover bg on cream alt */
+
+  --nb-catcount:  #333333;   /* tech category count color */
+}
+
+/* ── LIGHT MODE ───────────────────────── */
+html[data-theme="light"] {
+  --nb-bg:        #F5F0E8;   /* hero, projects, tech sections */
+  --nb-bg2:       #FFFFFF;   /* cards, secondary bg */
+  --nb-bg-alt:    #0A0A0A;   /* experience section (inverted) */
+  --nb-bg-hdr:    #F5F0E8;   /* header */
+
+  --nb-fg:        #0A0A0A;   /* primary text on cream bg */
+  --nb-fg-alt:    #F5F0E8;   /* text on dark alt bg */
+  --nb-fg2:       #5A5450;   /* descriptions */
+  --nb-fg3:       #6A6460;   /* dim text */
+  --nb-fg4:       #8A8478;   /* subtlest text */
+
+  --nb-bd:        #0A0A0A;   /* card border (stronger on light) */
+  --nb-bd2:       #D0CAC0;   /* subtle separators */
+  --nb-bd-alt:    #1A1A1A;   /* borders on dark alt bg */
+
+  --nb-hov:       #EDE8DF;   /* hover bg on cream */
+  --nb-hov-alt:   #1A1A1A;   /* hover bg on dark alt */
+
+  --nb-catcount:  #AAAAAA;   /* tech category count color */
 }
 
 * {
@@ -32,18 +72,8 @@ body {
 
 body {
   margin: 0;
-  background: radial-gradient(
-      ellipse at 50% 10%,
-      rgba(80, 209, 255, 0.16) 0%,
-      transparent 18%
-    ),
-    radial-gradient(
-      ellipse at 50% 90%,
-      rgba(10, 30, 60, 0.6) 0%,
-      transparent 30%
-    ),
-    var(--bg);
-  color: var(--muted);
+  background: var(--nb-bg);
+  color: var(--nb-fg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;

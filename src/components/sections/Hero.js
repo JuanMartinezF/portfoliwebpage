@@ -23,18 +23,14 @@ export default function Hero({ onOpenCV }) {
       {/* ── NAVBAR TICKER ── */}
       <div className={styles.ticker}>
         <div className={styles.tickerTrack}>
-          {[...Array(2)].map((_, i) => (
-            <span key={i} className={styles.tickerContent}>
-              <span>DESARROLLO WEB</span>
-              <span className={styles.dot}>◆</span>
-              <span>WHATSAPP BOT</span>
-              <span className={styles.dot}>◆</span>
-              <span>AUTOMATIZACIONES</span>
-              <span className={styles.dot}>◆</span>
-              <span>DATA ENGINEERING</span>
-              <span className={styles.dot}>◆</span>
-              <span>CANVA &amp; DISEÑO</span>
-              <span className={styles.dot}>◆</span>
+          {[...Array(8)].map((_, i) => (
+            <span key={i} className={styles.tickerContent} aria-hidden={i > 0}>
+              {h.ticker?.map((item, j) => (
+                <span key={j} style={{ display: 'inline-flex', alignItems: 'center', gap: '20px' }}>
+                  <span>{item}</span>
+                  <span className={styles.dot}>◆</span>
+                </span>
+              ))}
             </span>
           ))}
         </div>

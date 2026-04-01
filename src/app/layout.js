@@ -14,8 +14,23 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
+    <html lang="es" data-theme="dark">
       <head>
+        {/*
+          Inline script avoids flash-of-wrong-theme (FOWT).
+          Runs synchronously before any paint, reads localStorage
+          and sets data-theme before React hydrates.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var t = localStorage.getItem('nb-theme');
+                if (t) document.documentElement.setAttribute('data-theme', t);
+              } catch(e) {}
+            `,
+          }}
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap"
           rel="stylesheet"

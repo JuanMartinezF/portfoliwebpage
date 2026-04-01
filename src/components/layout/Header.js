@@ -6,7 +6,7 @@ import styles from './Header.module.css';
 
 export default function Header({ onOpenContact }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { lang, toggleLang, strings } = useLanguage();
+  const { lang, toggleLang, strings, theme, toggleTheme } = useLanguage();
   const nav = strings.nav;
 
   const scrollToTop = () => {
@@ -61,14 +61,26 @@ export default function Header({ onOpenContact }) {
           </button>
         </nav>
 
-        {/* LANGUAGE TOGGLE */}
-        <button
-          className={styles.langToggle}
-          onClick={toggleLang}
-          aria-label="Toggle language"
-        >
-          {lang === 'es' ? 'EN' : 'ES'}
-        </button>
+        {/* CONTROLS: LANG + THEME */}
+        <div className={styles.controls}>
+          {/* Language toggle */}
+          <button
+            className={styles.langToggle}
+            onClick={toggleLang}
+            aria-label="Toggle language"
+          >
+            {lang === 'es' ? 'EN' : 'ES'}
+          </button>
+
+          {/* Theme toggle */}
+          <button
+            className={styles.themeToggle}
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? '☀' : '🌙'}
+          </button>
+        </div>
 
         {/* HAMBURGER MOBILE */}
         <button

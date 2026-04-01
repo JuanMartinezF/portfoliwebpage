@@ -1,10 +1,11 @@
 /* ══════════════════════════════════════════
    PROJECT MODAL — Neo Brutalism
+   (Intentionally locked to light theme aesthetic for contrast)
 ══════════════════════════════════════════ */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 10, 10, 0.88);
+  background: var(--nb-overlay-bg, rgba(10, 10, 10, 0.88));
   z-index: 200;
   display: flex;
   align-items: center;
@@ -14,22 +15,22 @@
 }
 
 .modal {
-  background: #F5F0E8;
-  border: 3px solid #0A0A0A;
-  box-shadow: 10px 10px 0 #2D6BE4;
+  background: var(--nb-bg);
+  border: 3px solid var(--nb-bd);
+  box-shadow: 10px 10px 0 var(--nb-blue);
   width: 100%;
   max-width: 600px;
   overflow: hidden;
   position: relative;
-  my: auto;
+  margin: auto;
 }
 
 /* ── THUMBNAIL ───────────────────────── */
 .thumb {
   position: relative;
   height: 240px;
-  background: #0A0A0A;
-  border-bottom: 3px solid #0A0A0A;
+  background: var(--nb-bg2);
+  border-bottom: 3px solid var(--nb-bd);
   overflow: hidden;
 }
 
@@ -42,7 +43,7 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 64px;
   letter-spacing: 4px;
-  color: #2D6BE4;
+  color: var(--nb-blue);
   opacity: 0.3;
 }
 
@@ -50,9 +51,9 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  background: #0A0A0A;
-  border: 2px solid #333;
-  color: #F5F0E8;
+  background: var(--nb-bg);
+  border: 2px solid var(--nb-bd);
+  color: var(--nb-fg);
   font-size: 20px;
   width: 36px;
   height: 36px;
@@ -66,8 +67,8 @@
 }
 
 .close:hover {
-  border-color: #2D6BE4;
-  color: #2D6BE4;
+  border-color: var(--nb-blue);
+  color: var(--nb-blue);
 }
 
 /* ── BODY ────────────────────────────── */
@@ -83,7 +84,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #2D6BE4;
+  color: var(--nb-blue);
   margin-bottom: 8px;
 }
 
@@ -91,7 +92,7 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(22px, 4vw, 32px);
   letter-spacing: 1px;
-  color: #0A0A0A;
+  color: var(--nb-fg);
   margin: 0 0 16px;
   line-height: 1.1;
 }
@@ -100,7 +101,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   line-height: 1.75;
-  color: #5A5450;
+  color: var(--nb-fg2);
   margin-bottom: 12px;
 }
 
@@ -109,7 +110,7 @@
   list-style: none;
   padding: 0;
   margin: 20px 0;
-  border: 2px solid #0A0A0A;
+  border: 2px solid var(--nb-bd);
 }
 
 .highlightItem {
@@ -117,10 +118,10 @@
   align-items: flex-start;
   gap: 12px;
   padding: 12px 16px;
-  border-bottom: 2px solid #E0DAD0;
+  border-bottom: 2px solid var(--nb-bd2);
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
-  color: #3A3530;
+  color: var(--nb-fg);
   line-height: 1.5;
 }
 
@@ -130,7 +131,7 @@
 
 .highlightDot {
   font-size: 8px;
-  color: #2D6BE4;
+  color: var(--nb-blue);
   flex-shrink: 0;
   margin-top: 4px;
 }
@@ -150,13 +151,13 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 4px 10px;
-  border: 2px solid #0A0A0A;
+  border: 2px solid var(--nb-bd);
   border-radius: 0;
 }
 
-.badge_blue    { background: #2D6BE4; color: #F5F0E8; border-color: #2D6BE4; }
-.badge_green   { background: #00C566; color: #0A0A0A; border-color: #00C566; }
-.badge_outline { background: transparent; color: #8A8478; border-color: #C8C2B4; }
+.badge_blue    { background: var(--nb-blue); color: var(--nb-white); border-color: var(--nb-blue); }
+.badge_green   { background: var(--nb-green); color: var(--nb-black); border-color: var(--nb-green); }
+.badge_outline { background: transparent; color: var(--nb-fg3); border-color: var(--nb-bd); }
 
 /* ── CTA ─────────────────────────────── */
 .cta {
@@ -168,18 +169,18 @@
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #F5F0E8;
-  background: #0A0A0A;
-  border: 2px solid #0A0A0A;
+  color: var(--nb-bg);
+  background: var(--nb-fg);
+  border: 2px solid var(--nb-fg);
   padding: 12px 20px;
   text-decoration: none;
-  box-shadow: 4px 4px 0 #2D6BE4;
+  box-shadow: 4px 4px 0 var(--nb-blue);
   transition: transform 0.12s, box-shadow 0.12s;
 }
 
 .cta:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 #2D6BE4;
+  box-shadow: 6px 6px 0 var(--nb-blue);
 }
 
 /* ── RESPONSIVE ──────────────────────── */

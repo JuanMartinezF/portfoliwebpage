@@ -1,10 +1,10 @@
 /* ══════════════════════════════════════════
-   TECHNOLOGIES — Neo Brutalism
+   TECHNOLOGIES — Neo Brutalism (theme-aware)
 ══════════════════════════════════════════ */
 .section {
-  background: #0A0A0A;
-  border-top: 3px solid #0A0A0A;
-  border-bottom: 3px solid #0A0A0A;
+  background: var(--nb-bg);
+  border-top: 3px solid var(--nb-black);
+  border-bottom: 3px solid var(--nb-black);
   padding: 100px 0;
 }
 
@@ -26,7 +26,7 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 80px;
   line-height: 1;
-  color: #2D6BE4;
+  color: var(--nb-blue);
   opacity: 0.2;
 }
 
@@ -35,7 +35,7 @@
   font-size: clamp(36px, 6vw, 60px);
   letter-spacing: 2px;
   line-height: 1;
-  color: #F5F0E8;
+  color: var(--nb-fg);
   margin: 0;
 }
 
@@ -44,12 +44,12 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 0;
-  border: 3px solid #333;
+  border: 3px solid var(--nb-bd);
   margin-bottom: 24px;
 }
 
 .category {
-  border-right: 3px solid #333;
+  border-right: 3px solid var(--nb-bd);
 }
 
 .category:last-child {
@@ -57,7 +57,7 @@
 }
 
 .categoryWide {
-  border-right: 3px solid #333;
+  border-right: 3px solid var(--nb-bd);
 }
 
 /* ── CATEGORY HEADER ─────────────────── */
@@ -66,8 +66,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 20px;
-  border-bottom: 3px solid #333;
-  background: #111;
+  border-bottom: 3px solid var(--nb-bd);
+  background: var(--nb-bg2);
 }
 
 .catTitle {
@@ -76,13 +76,13 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #2D6BE4;
+  color: var(--nb-blue);
 }
 
 .catCount {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 20px;
-  color: #333;
+  color: var(--nb-catcount);
   line-height: 1;
 }
 
@@ -99,14 +99,14 @@
   align-items: center;
   gap: 12px;
   padding: 14px 16px;
-  border-bottom: 2px solid #1A1A1A;
-  border-right: 2px solid #1A1A1A;
+  border-bottom: 2px solid var(--nb-bd2);
+  border-right: 2px solid var(--nb-bd2);
   transition: background 0.15s;
   cursor: default;
 }
 
 .techItem:hover {
-  background: #1A1A1A;
+  background: var(--nb-hov);
 }
 
 .techItem:nth-child(even) {
@@ -119,25 +119,25 @@
 }
 
 .techItemLearning:hover {
-  background: #1A1A1A;
+  background: var(--nb-hov);
 }
 
 /* ── TECH ICON ───────────────────────── */
 .techIcon {
   width: 40px;
   height: 40px;
-  border: 2px solid #2A2A2A;
+  border: 2px solid var(--nb-bd2);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  background: #0F0F0F;
+  background: var(--nb-bg);
   padding: 4px;
   transition: border-color 0.15s;
 }
 
 .techItem:hover .techIcon {
-  border-color: #2D6BE4;
+  border-color: var(--nb-blue);
 }
 
 /* ── TECH INFO ───────────────────────── */
@@ -152,7 +152,7 @@
   font-family: 'Space Mono', monospace;
   font-size: 11px;
   font-weight: 700;
-  color: #F5F0E8;
+  color: var(--nb-fg);
   letter-spacing: 0.5px;
   white-space: nowrap;
   overflow: hidden;
@@ -162,7 +162,7 @@
 .techLevel {
   font-family: 'Space Mono', monospace;
   font-size: 9px;
-  color: #555;
+  color: var(--nb-fg3);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -170,7 +170,7 @@
 /* barra de nivel */
 .techBar {
   height: 2px;
-  background: #222;
+  background: var(--nb-bd2);
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -179,7 +179,7 @@
 
 .techBarFill {
   height: 100%;
-  background: #2D6BE4;
+  background: var(--nb-blue);
   position: absolute;
   left: 0;
   top: 0;
@@ -192,8 +192,8 @@
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #0A0A0A;
-  background: #2D6BE4;
+  color: var(--nb-black);
+  background: var(--nb-blue);
   padding: 2px 7px;
   display: inline-block;
   margin-top: 2px;
@@ -201,7 +201,7 @@
 
 /* ── LEARNING SECTION ────────────────── */
 .learningSection {
-  border: 3px solid #333;
+  border: 3px solid var(--nb-bd);
 }
 
 .learningHeader {
@@ -209,13 +209,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 20px;
-  border-bottom: 3px solid #333;
-  background: #111;
+  border-bottom: 3px solid var(--nb-bd);
+  background: var(--nb-bg2);
 }
 
 .learningDot {
   font-size: 10px;
-  color: #2D6BE4;
+  color: var(--nb-blue);
   animation: pulse 2s ease-in-out infinite;
 }
 
@@ -231,7 +231,7 @@
 }
 
 .learningGrid .techItem {
-  border-right: 2px solid #1A1A1A;
+  border-right: 2px solid var(--nb-bd2);
   border-bottom: none;
   flex-direction: column;
   align-items: center;
@@ -258,7 +258,7 @@
   .category,
   .categoryWide {
     border-right: none;
-    border-bottom: 3px solid #333;
+    border-bottom: 3px solid var(--nb-bd);
   }
 
   .category:last-child {
@@ -284,7 +284,7 @@
   }
 
   .learningGrid .techItem {
-    border-bottom: 2px solid #1A1A1A;
+    border-bottom: 2px solid var(--nb-bd2);
   }
 
   .learningGrid .techItem:nth-last-child(-n+2) {
