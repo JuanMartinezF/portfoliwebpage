@@ -5,6 +5,7 @@
     "experience": "Experiencia",
     "projects": "Proyectos",
     "technologies": "Tecnologías",
+    "education": "Educación",
     "cta": "Hablemos →"
   },
 
@@ -12,10 +13,11 @@
     "location": "📍 Popayán, Colombia",
     "greeting": ["HOLA,", "SOY"],
     "name": "JUAN.",
-    "description": "Desarrollo páginas web y automatizo procesos con WhatsApp para negocios que quieren crecer en digital. Trabajo con empresas locales y clientes remotos.",
+    "role": "Científico de Datos & Ingeniero IA",
+    "description": "Diseño y entreno modelos de Machine Learning y Deep Learning, construyo pipelines de adquisición de datos a gran escala y desarrollo soluciones con IA (RAG, LLMs, visión artificial) de principio a fin.",
     "whatsapp": "WhatsApp",
     "downloadCV": "Descargar CV",
-    "ticker": ["DESARROLLO WEB", "WHATSAPP BOT", "AUTOMATIZACIONES", "DATA ENGINEERING", "CANVA & DISEÑO"],
+    "ticker": ["MACHINE LEARNING", "DEEP LEARNING", "VISIÓN ARTIFICIAL", "DATA ENGINEERING", "WEB SCRAPING", "IA GENERATIVA"],
     "stats": {
       "projects": "Proyectos",
       "experience": "Años exp.",
@@ -23,6 +25,10 @@
       "availableValue": "● SÍ",
       "base": "Base"
     }
+  },
+
+  "aboutMobile": {
+    "tags": ["Científico de Datos", "Ingeniero IA", "Visión Artificial"]
   },
 
   "experience": {
@@ -41,9 +47,10 @@
     "sectionTitle": "TECNOLOGÍAS",
     "categories": {
       "languages": "Lenguajes",
-      "frameworks": "Frameworks & Librerías",
+      "dataScience": "Ciencia de Datos & ML",
       "tools": "Herramientas",
-      "learning": "Actualmente aprendiendo"
+      "learning": "Actualmente aprendiendo",
+      "webDev": "Desarrollo Web"
     },
     "levels": {
       "Basico": "Básico",
@@ -52,6 +59,20 @@
       "Avanzado": "Avanzado"
     },
     "learningBadge": "En progreso"
+  },
+
+  "education": {
+    "sectionNumber": "04",
+    "sectionTitle": "EDUCACIÓN & CERTIFICACIONES",
+    "degreeLabel": "Pregrado",
+    "certLabel": "Certificación"
+  },
+
+  "otherWork": {
+    "sectionNumber": "05",
+    "sectionTitle": "OTROS TRABAJOS Y HABILIDADES",
+    "subtitle": "Proyectos de desarrollo web y stack complementario, fuera del foco principal en datos e IA.",
+    "cta": "Ver →"
   },
 
   "footer": {

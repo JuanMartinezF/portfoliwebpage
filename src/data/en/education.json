@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Physics Engineering",
+    "institution": "Universidad del Cauca",
+    "date": "2025",
+    "type": "degree",
+    "description": "Thesis project on computer vision: vehicle detection and tracking with YOLO on aerial drone footage."
+  },
+  {
+    "id": 2,
+    "title": "Google Cloud Foundations",
+    "institution": "Google",
+    "date": "2025",
+    "type": "certification"
+  },
+  {
+    "id": 3,
+    "title": "Power BI Certification",
+    "institution": "Santander Open Academy",
+    "date": "2025",
+    "type": "certification"
+  },
+  {
+    "id": 4,
+    "title": "Intermediate Excel",
+    "institution": "Santander Open Academy",
+    "date": "2025",
+    "type": "certification"
+  },
+  {
+    "id": 5,
+    "title": "C++ Programming",
+    "institution": "SENA",
+    "date": "2021",
+    "type": "certification"
+  }
+]

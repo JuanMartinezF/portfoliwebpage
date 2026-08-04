@@ -115,6 +115,19 @@
 
 .heroAccent { color: var(--nb-blue); }
 
+.roleTag {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--nb-white);
+  background: var(--nb-blue);
+  padding: 6px 14px;
+  margin-bottom: 20px;
+}
+
 .heroDesc {
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;

@@ -106,11 +106,11 @@ export default function Technologies() {
             </motion.div>
           </motion.div>
 
-          {/* Frameworks */}
+          {/* Data Science & ML */}
           <motion.div className={`${styles.category} ${styles.categoryWide}`} variants={fadeUp}>
             <div className={styles.catHeader}>
-              <span className={styles.catTitle}>{s.categories.frameworks}</span>
-              <span className={styles.catCount}>{technologiesData.frameworks.length}</span>
+              <span className={styles.catTitle}>{s.categories.dataScience}</span>
+              <span className={styles.catCount}>{technologiesData.dataScience.length}</span>
             </div>
             <motion.div
               className={styles.techGrid}
@@ -119,7 +119,7 @@ export default function Technologies() {
               whileInView="visible"
               viewport={viewportConfig}
             >
-              {technologiesData.frameworks.map((tech) => (
+              {technologiesData.dataScience.map((tech) => (
                 <TechItem key={tech.name} tech={tech} strings={strings} />
               ))}
             </motion.div>

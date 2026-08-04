@@ -40,5 +40,12 @@
     "role": "Full Stack Developer",
     "company": "Servitaxi S.A.",
     "description": "Designed, developed, and deployed a fullstack website for a client, including a React/TypeScript frontend, functional contact form, basic SEO optimization, and hosting deployment."
+  },
+  {
+    "id": 7,
+    "date": "2025 - 2026 | August – Present",
+    "role": "AI Team Lead",
+    "company": "SMB Marketplace (Own Project)",
+    "description": "Led a 4-person team under Scrum methodology, building three AI solutions for a marketplace: a product-summary generator, an AI chat to assist sellers and buyers, and an AI integration in WhatsApp via Meta's Cloud API, n8n workflows, RAG, and a PostgreSQL database. Internal testing showed we covered 80% of merchants' questions when joining the marketplace and delivered more human-like WhatsApp responses."
   }
 ]

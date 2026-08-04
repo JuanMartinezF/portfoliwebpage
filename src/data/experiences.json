@@ -40,5 +40,12 @@
     "role": "Desarrollador Full Stack",
     "company": "Servitaxi S.A.",
     "description": "Diseñé, desarrollé y desplegué un sitio web fullstack para cliente, incluyendo frontend en React/TypeScript, formulario funcional, optimización básica SEO y despliegue en hosting."
+  },
+  {
+    "id": 7,
+    "date": "2025 - 2026 | Agosto – Actualidad",
+    "role": "Líder Equipo IA",
+    "company": "Marketplace para Pymes (Proyecto propio)",
+    "description": "Lideré un equipo de 4 personas bajo metodología Scrum, desarrollando tres soluciones de IA para un marketplace: un generador de resúmenes de productos, un chat con IA para atender vendedores y compradores, y una integración de IA en WhatsApp mediante la API Cloud de Meta, flujos de n8n, RAG y una base de datos en PostgreSQL. Con pruebas internas cubrimos el 80% de las dudas de los comerciantes al unirse al marketplace y logramos respuestas más humanas vía WhatsApp."
   }
 ]

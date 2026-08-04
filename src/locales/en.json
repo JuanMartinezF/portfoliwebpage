@@ -5,6 +5,7 @@
     "experience": "Experience",
     "projects": "Projects",
     "technologies": "Technologies",
+    "education": "Education",
     "cta": "Let's Talk →"
   },
 
@@ -12,10 +13,11 @@
     "location": "📍 Popayán, Colombia",
     "greeting": ["HI,", "I AM"],
     "name": "JUAN.",
-    "description": "I build websites and automate processes with WhatsApp for businesses looking to grow online. I work with local companies and remote clients.",
+    "role": "Data Scientist & AI Engineer",
+    "description": "I design and train Machine Learning and Deep Learning models, build large-scale data acquisition pipelines, and ship end-to-end AI solutions (RAG, LLMs, computer vision).",
     "whatsapp": "WhatsApp",
     "downloadCV": "Download CV",
-    "ticker": ["WEB DEVELOPMENT", "WHATSAPP BOT", "AUTOMATIONS", "DATA ENGINEERING", "CANVA & DESIGN"],
+    "ticker": ["MACHINE LEARNING", "DEEP LEARNING", "COMPUTER VISION", "DATA ENGINEERING", "WEB SCRAPING", "GENERATIVE AI"],
     "stats": {
       "projects": "Projects",
       "experience": "Yrs exp.",
@@ -23,6 +25,10 @@
       "availableValue": "● YES",
       "base": "Base"
     }
+  },
+
+  "aboutMobile": {
+    "tags": ["Data Scientist", "AI Engineer", "Computer Vision"]
   },
 
   "experience": {
@@ -41,9 +47,10 @@
     "sectionTitle": "TECHNOLOGIES",
     "categories": {
       "languages": "Languages",
-      "frameworks": "Frameworks & Libraries",
+      "dataScience": "Data Science & ML",
       "tools": "Tools",
-      "learning": "Currently learning"
+      "learning": "Currently learning",
+      "webDev": "Web Development"
     },
     "levels": {
       "Basico": "Basic",
@@ -52,6 +59,20 @@
       "Avanzado": "Advanced"
     },
     "learningBadge": "In progress"
+  },
+
+  "education": {
+    "sectionNumber": "04",
+    "sectionTitle": "EDUCATION & CERTIFICATIONS",
+    "degreeLabel": "Degree",
+    "certLabel": "Certification"
+  },
+
+  "otherWork": {
+    "sectionNumber": "05",
+    "sectionTitle": "OTHER WORK & SKILLS",
+    "subtitle": "Web development projects and complementary stack, outside the main data & AI focus.",
+    "cta": "View →"
   },
 
   "footer": {

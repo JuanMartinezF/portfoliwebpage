@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Ingeniería Física",
+    "institution": "Universidad del Cauca",
+    "date": "2025",
+    "type": "degree",
+    "description": "Trabajo de grado en visión artificial: detección y seguimiento de vehículos con YOLO sobre video aéreo de dron."
+  },
+  {
+    "id": 2,
+    "title": "Google Cloud Foundations",
+    "institution": "Google",
+    "date": "2025",
+    "type": "certification"
+  },
+  {
+    "id": 3,
+    "title": "Certificación Power BI",
+    "institution": "Santander Open Academy",
+    "date": "2025",
+    "type": "certification"
+  },
+  {
+    "id": 4,
+    "title": "Excel Intermedio",
+    "institution": "Santander Open Academy",
+    "date": "2025",
+    "type": "certification"
+  },
+  {
+    "id": 5,
+    "title": "Programación C++",
+    "institution": "SENA",
+    "date": "2021",
+    "type": "certification"
+  }
+]

@@ -1,0 +1,136 @@
+/* ══════════════════════════════════════════
+   OTHER WORK & SKILLS — de-emphasized, neo brutalism (theme-aware)
+══════════════════════════════════════════ */
+.section {
+  background: var(--nb-bg-alt);
+  border-bottom: 3px solid var(--nb-black);
+  padding: 64px 0;
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.sectionNumber {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--nb-blue);
+  opacity: 0.2;
+}
+
+.sectionTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(22px, 3.5vw, 32px);
+  letter-spacing: 1.5px;
+  line-height: 1;
+  color: var(--nb-fg-alt);
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--nb-gray);
+  max-width: 480px;
+  margin: 0;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+/* ── PROJECT LIST ────────────────────── */
+.projectList {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--nb-fg-alt);
+}
+
+.projectItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 16px 20px;
+  border-bottom: 2px solid var(--nb-fg-alt);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  transition: background 0.15s;
+}
+
+.projectItem:last-child {
+  border-bottom: none;
+}
+
+.projectItem:hover {
+  background: var(--nb-hov-alt);
+}
+
+.projectTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: var(--nb-fg-alt);
+}
+
+.projectDesc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--nb-gray);
+}
+
+.cta {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--nb-blue);
+  margin-top: 4px;
+}
+
+/* ── TAG CLOUD ───────────────────────── */
+.tagCloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+  border: 2px solid var(--nb-fg-alt);
+  padding: 16px 20px;
+}
+
+.tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--nb-fg-alt);
+  border: 2px solid var(--nb-fg-alt);
+  padding: 5px 10px;
+  height: fit-content;
+}
+
+/* ── RESPONSIVE ──────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 48px 0; }
+  .columns { grid-template-columns: 1fr; }
+  .sectionNumber { font-size: 36px; }
+}

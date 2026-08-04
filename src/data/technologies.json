@@ -1,38 +1,40 @@
 {
   "programming": [
     { "name": "Python", "level": "Intermedio", "icon": "/iconos/pythonlogo.webp" },
-    { "name": "JavaScript", "level": "Basico", "icon": "/iconos/JavaScriptlogo.png" },
+    { "name": "SQL", "level": "Intermedio", "icon": "/iconos/sqllogo.png" },
     { "name": "C++", "level": "Basico", "icon": "/iconos/C++logo.png" }
   ],
-  "frameworks": [
-    { "name": "Next.js", "level": "Basico", "icon": "/iconos/next_jslogo.png" },
-    { "name": "React", "level": "Intermedio", "icon": "/iconos/Reactlogogrande.png" },
+  "dataScience": [
     { "name": "Tensor flow", "level": "Intermedio", "icon": "/iconos/Tensorflowlogosimple.png" },
     { "name": "Keras", "level": "Intermedio", "icon": "/iconos/keraslogogrande.png" },
+    { "name": "Scikit-learn", "level": "Intermedio", "icon": "/iconos/Scikitlearnlogo.png" },
     { "name": "Numpy", "level": "Intermedio", "icon": "/iconos/numpylogogrande.png" },
     { "name": "Pandas", "level": "Intermedio", "icon": "/iconos/Pandaslogogrande.png" },
     { "name": "Matplotlib", "level": "Intermedio", "icon": "/iconos/matplotliblogo.webp" },
     { "name": "Seaborn", "level": "Intermedio", "icon": "/iconos/seabornlogo.svg" },
-    { "name": "Scikit-learn", "level": "Intermedio", "icon": "/iconos/Scikitlearnlogo.png" },
     { "name": "Beautifulsoup", "level": "Intermedio", "icon": "/iconos/bs4logo.png" },
-    { "name": "Selenium", "level": "Intermedio", "icon": "/iconos/Seleniumlogo.png" },
-    { "name": "Tailwind CSS", "level": "Intermedio", "icon": "/iconos/Tailwindlogo.png" },
-    { "name": "HTML", "level": "Intermedio", "icon": "/iconos/HTML5logo.png" },
-    { "name": "CSS", "level": "Básico", "icon": "/iconos/CSS3logo.png" }
+    { "name": "Selenium", "level": "Intermedio", "icon": "/iconos/Seleniumlogo.png" }
   ],
   "tools": [
     { "name": "Git", "level": "Basico", "icon": "/iconos/gitlogo.png" },
     { "name": "GitHub", "level": "Basico", "icon": "/iconos/githublogo.png" },
     { "name": "GCP", "level": "Basico", "icon": "/iconos/gcplogo.png" },
-    { "name": "Figma", "level": "Basico", "icon": "/iconos/Figmalogo.png" },
     { "name": "Power BI", "level": "Basico", "icon": "/iconos/PowerBIlogosolo.png" },
-    { "name": "Notion", "level": "Basico", "icon": "/iconos/notionlogo.png" },
-    { "name": "MATLAB", "level": "Intermedio", "icon": "/iconos/matlablogo.png" }
+    { "name": "MATLAB", "level": "Intermedio", "icon": "/iconos/matlablogo.png" },
+    { "name": "Notion", "level": "Basico", "icon": "/iconos/notionlogo.png" }
   ],
   "learning": [
-    { "name": "Hugging Face", "icon": "/iconos/huggingfacelogo.avif" },
-    { "name": "SQL", "icon": "/iconos/sqllogo.png" },
     { "name": "Lang Chain", "icon": "/iconos/langchainlogo.webp" },
+    { "name": "Hugging Face", "icon": "/iconos/huggingfacelogo.avif" },
     { "name": "Azure", "icon": "/iconos/azurelogo.png" }
+  ],
+  "webDev": [
+    { "name": "React", "level": "Intermedio", "icon": "/iconos/Reactlogogrande.png" },
+    { "name": "Next.js", "level": "Basico", "icon": "/iconos/next_jslogo.png" },
+    { "name": "JavaScript", "level": "Basico", "icon": "/iconos/JavaScriptlogo.png" },
+    { "name": "Tailwind CSS", "level": "Intermedio", "icon": "/iconos/Tailwindlogo.png" },
+    { "name": "HTML", "level": "Intermedio", "icon": "/iconos/HTML5logo.png" },
+    { "name": "CSS", "level": "Básico", "icon": "/iconos/CSS3logo.png" },
+    { "name": "Figma", "level": "Basico", "icon": "/iconos/Figmalogo.png" }
   ]
 }

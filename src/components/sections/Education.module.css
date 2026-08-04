@@ -1,0 +1,134 @@
+/* ══════════════════════════════════════════
+   EDUCATION & CERTIFICATIONS — Neo Brutalism (theme-aware)
+══════════════════════════════════════════ */
+.section {
+  background: var(--nb-bg);
+  border-top: 3px solid var(--nb-black);
+  border-bottom: 3px solid var(--nb-black);
+  padding: 100px 0;
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.sectionNumber {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  color: var(--nb-blue);
+  opacity: 0.2;
+}
+
+.sectionTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 5.5vw, 52px);
+  letter-spacing: 2px;
+  line-height: 1;
+  color: var(--nb-fg);
+  margin: 0;
+}
+
+/* ── LISTA ───────────────────────────── */
+.list {
+  border: 3px solid var(--nb-bd);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  border-bottom: 2px solid var(--nb-bd2);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background: var(--nb-hov);
+}
+
+.badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--nb-black);
+  background: var(--nb-blue);
+  padding: 4px 10px;
+  display: inline-block;
+  text-align: center;
+  width: fit-content;
+}
+
+.content {
+  min-width: 0;
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: var(--nb-fg);
+  margin: 0;
+  line-height: 1.15;
+}
+
+.institution {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--nb-blue);
+  margin: 2px 0 0;
+}
+
+.description {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--nb-fg3);
+  margin: 6px 0 0;
+}
+
+.date {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: var(--nb-fg3);
+  white-space: nowrap;
+}
+
+/* ── RESPONSIVE ──────────────────────── */
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .sectionNumber {
+    font-size: 56px;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .date {
+    font-size: 16px;
+  }
+}

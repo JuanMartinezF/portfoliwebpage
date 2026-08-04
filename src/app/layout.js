@@ -2,8 +2,8 @@ import "./globals.css";
 import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata = {
-  title: "JuanC",
-  description: "Portfolio of Juan Carlos Martínez Fernández - Developer",
+  title: "Juan Carlos Martínez — Data Scientist & AI Engineer",
+  description: "Portfolio of Juan Carlos Martínez Fernández — Data Scientist & AI Engineer specializing in Machine Learning, Deep Learning, Computer Vision and large-scale data acquisition.",
 };
 
 export const viewport = {

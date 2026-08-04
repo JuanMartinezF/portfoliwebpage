@@ -56,6 +56,9 @@ export default function Header({ onOpenContact }) {
           <button className={styles.navLink} onClick={() => scrollToSection('technologies')}>
             {nav.technologies}
           </button>
+          <button className={styles.navLink} onClick={() => scrollToSection('education')}>
+            {nav.education}
+          </button>
           <button className={`${styles.navLink} ${styles.navCta}`} onClick={handleContact}>
             {nav.cta}
           </button>

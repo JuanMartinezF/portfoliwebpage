@@ -10,6 +10,8 @@ import Hero from '@/components/sections/Hero';
 import AboutMobile from '@/components/sections/AboutMobile';
 import Experience from '@/components/sections/Experience';
 import Technologies from '@/components/sections/Technologies';
+import Education from '@/components/sections/Education';
+import OtherWork from '@/components/sections/OtherWork';
 import ProjectCard from '@/components/sections/ProjectCard';
 import ProjectModal from '@/components/modals/ProjectModal';
 import CVModal from '@/components/modals/CVModal';
@@ -23,8 +25,9 @@ export default function Home() {
   const { projects, strings } = useLanguage();
   const s = strings.projects;
 
-  const featured = projects.find((p) => p.id === 6);
-  const rest = projects.filter((p) => p.id !== 6);
+  const dataProjects = projects.filter((p) => p.category !== 'web');
+  const featured = dataProjects.find((p) => p.featured) || dataProjects[0];
+  const rest = dataProjects.filter((p) => p.id !== featured?.id);
 
   return (
     <>
@@ -72,6 +75,10 @@ export default function Home() {
           </section>
 
           <Technologies />
+
+          <Education />
+
+          <OtherWork onSelectProject={setActiveProject} />
         </main>
         <Footer />
       </div>

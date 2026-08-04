@@ -66,6 +66,10 @@ export default function Hero({ onOpenCV }) {
             </motion.span>
           </motion.h1>
 
+          <motion.span className={styles.roleTag} variants={fadeUp}>
+            {h.role}
+          </motion.span>
+
           <motion.p className={styles.heroDesc} variants={fadeUp}>
             {h.description}
           </motion.p>
@@ -120,11 +124,11 @@ export default function Hero({ onOpenCV }) {
             <div className={styles.cardBody}>
               <div className={styles.statRow}>
                 <span className={styles.statLabel}>{h.stats.projects}</span>
-                <span className={styles.statValue}>8+</span>
+                <span className={styles.statValue}>9+</span>
               </div>
               <div className={styles.statRow}>
                 <span className={styles.statLabel}>{h.stats.experience}</span>
-                <span className={styles.statValue}>5+</span>
+                <span className={styles.statValue}>2+</span>
               </div>
               <div className={styles.statRow}>
                 <span className={styles.statLabel}>{h.stats.available}</span>

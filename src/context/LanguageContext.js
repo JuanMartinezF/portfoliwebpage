@@ -7,6 +7,8 @@ import esExperiences from '@/data/experiences.json';
 import enExperiences from '@/data/en/experiences.json';
 import esProjects from '@/data/projects.json';
 import enProjects from '@/data/en/projects.json';
+import esEducation from '@/data/education.json';
+import enEducation from '@/data/en/education.json';
 
 const AppContext = createContext(null);
 
@@ -39,9 +41,10 @@ export function LanguageProvider({ children }) {
   const strings = lang === 'es' ? esStrings : enStrings;
   const experiences = lang === 'es' ? esExperiences : enExperiences;
   const projects = lang === 'es' ? esProjects : enProjects;
+  const education = lang === 'es' ? esEducation : enEducation;
 
   return (
-    <AppContext.Provider value={{ lang, toggleLang, strings, experiences, projects, theme, toggleTheme }}>
+    <AppContext.Provider value={{ lang, toggleLang, strings, experiences, projects, education, theme, toggleTheme }}>
       {children}
     </AppContext.Provider>
   );

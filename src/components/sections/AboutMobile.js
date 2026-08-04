@@ -1,7 +1,12 @@
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './AboutMobile.module.css';
 
 export default function AboutMobile() {
+  const { strings } = useLanguage();
+  const tags = strings.aboutMobile.tags;
+  const heroStats = strings.hero.stats;
+
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
@@ -22,27 +27,27 @@ export default function AboutMobile() {
         <div className={styles.info}>
           <div className={styles.name}>JUAN CARLOS<br />MARTÍNEZ F.</div>
           <div className={styles.tagList}>
-            <span className={styles.tag}>Desarrollador Web</span>
-            <span className={styles.tag}>WhatsApp Bots</span>
-            <span className={styles.tag}>Data Engineer</span>
+            {tags.map((tag) => (
+              <span key={tag} className={styles.tag}>{tag}</span>
+            ))}
           </div>
         </div>
 
         {/* stats */}
         <div className={styles.stats}>
           <div className={styles.stat}>
-            <span className={styles.statValue}>8+</span>
-            <span className={styles.statLabel}>Proyectos</span>
+            <span className={styles.statValue}>9+</span>
+            <span className={styles.statLabel}>{heroStats.projects}</span>
           </div>
           <div className={styles.statDivider} />
           <div className={styles.stat}>
-            <span className={styles.statValue}>5+</span>
-            <span className={styles.statLabel}>Años exp.</span>
+            <span className={styles.statValue}>2+</span>
+            <span className={styles.statLabel}>{heroStats.experience}</span>
           </div>
           <div className={styles.statDivider} />
           <div className={styles.stat}>
-            <span className={`${styles.statValue} ${styles.available}`}>● SÍ</span>
-            <span className={styles.statLabel}>Disponible</span>
+            <span className={`${styles.statValue} ${styles.available}`}>{heroStats.availableValue}</span>
+            <span className={styles.statLabel}>{heroStats.available}</span>
           </div>
         </div>
 
